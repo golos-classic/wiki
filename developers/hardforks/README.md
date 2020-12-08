@@ -1,4 +1,4 @@
-# HardForks
+# Обновления \(HardForks\)
 
 * [HF18: Руководство по установке](hf18_instruction.md)
 * [HF18: Новые возможности](hf18_release.md)

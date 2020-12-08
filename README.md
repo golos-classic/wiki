@@ -8,7 +8,7 @@
   
 Из альтернативных есть [expertgroup.org](https://expertgroup.org/), в сети TOR [goloszrorrdctlwf.onion](http://goloszrorrdctlwf.onion), а также [gol.oss](http://gol.oss), который доступен при использовании децентрализованных DNS от [OpenNIC](https://www.opennic.org/).
 
-Начните изучение возможностей Golos Блоги с раздела для [Пользователей](users/welcome.md).
+Начните изучение возможностей Golos Блоги с раздела для [Пользователей](users/welcome/).
 
 Если вас интересует разработка программного обеспечения для Голоса и на Голосе, много полезной информации вы найдёте в разделе для [Разработчиков](developers/basics/).
 

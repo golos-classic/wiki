@@ -4,12 +4,10 @@
 
 ## ПОЛЬЗОВАТЕЛЯМ <a id="users"></a>
 
-* [Начни отсюда](users/welcome.md)
 * [Способы регистрации](users/registration.md)
-* [Полезные посты](users/posts/README.md)
-  * [Внутренняя биржа](https://golos.id/ru--golos/@allforyou/torguem-na-vnutrennei-birzhe-golosa)
-  * [Сервис поиска по БЧ](users/posts/golos-history.md)
-  * [Кошелёк и ключи](users/posts/wallet.md)
+* [Старт на Golos Блоги](users/welcome/README.md)
+  * [Кошелёк и ключи](users/welcome/wallet.md)
+* [Полезные посты](users/posts.md)
 * [Вопросы и ответы](users/faq.md)
 
 ## Разработчикам <a id="developers"></a>
@@ -29,7 +27,7 @@
   * [API part 3](developers/api/api-golos-ch3.md)
   * [API part 4](developers/api/api-golos-ch4.md)
   * [Cli-wallet API](developers/api/cli-wallet.md)
-* [HardForks](developers/hardforks/README.md)
+* [Обновления \(HardForks\)](developers/hardforks/README.md)
   * [HF18: Руководство по установке](developers/hardforks/hf18_instruction.md)
   * [HF18: Новые возможности](developers/hardforks/hf18_release.md)
   * [HF18: Изменения в API](developers/hardforks/hf18_api_changes.md)
@@ -40,7 +38,7 @@
   * [HF22: Новые возможности](developers/hardforks/hf22_release.md)
   * [HF23: Новые возможности](developers/hardforks/hf23_release.md)
   * [HF24: Новые возможности](developers/hardforks/hf24-novye-vozmozhnosti.md)
-* [Руководства \(HOWTO\)](developers/howto/README.md)
+* [Руководства \(HowTo\)](developers/howto/README.md)
   * [Скрипт регистрации аккаунтов](developers/howto/registration-service.md)
   * [Как использовать мультиподписи](developers/howto/multisig.md)
   * [Как объединять операции в одну транзакцию](developers/howto/ops-merging.md)
