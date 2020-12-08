@@ -1,4 +1,4 @@
-# Полезные посты
+# Полезные статьи
 
 * Описание [внутренней биржи](https://golos.id/ru--golos/@allforyou/torguem-na-vnutrennei-birzhe-golosa) \(автор [@allforyou](https://golos.id/@allforyou)\)
 * Инструкция по [созданию UIA](https://golos.id/ru--golos/@allforyou/sozdaem-i-ispolzuem-uia-na-golose) \(автор [@allforyou](https://golos.id/@allforyou)\)

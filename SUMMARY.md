@@ -8,7 +8,7 @@
 * [Старт на Golos Блоги](users/welcome/README.md)
   * [Кошелёк и ключи](users/welcome/wallet.md)
 * [Вопросы и ответы](users/faq.md)
-* [Полезные посты](users/posts.md)
+* [Полезные статьи](users/posts.md)
 
 ## Разработчикам <a id="developers"></a>
 
@@ -40,12 +40,10 @@
   * [HF24: Новые возможности](developers/hardforks/hf24-novye-vozmozhnosti.md)
 * [Руководства \(HowTo\)](developers/howto/README.md)
   * [Скрипт регистрации аккаунтов](developers/howto/registration-service.md)
-  * [Создаем сайт на базе блокчейна](https://golos.id/ru--golos/@vik/sozdaem-sobstvennyi-sait-na-baze-blockchain-golosa-za-30-minut)
   * [Как использовать мультиподписи](developers/howto/multisig.md)
   * [Как объединять операции в одну транзакцию](developers/howto/ops-merging.md)
   * [Кэширование API](developers/howto/api-cache.md)
   * [Пример запуска тестнета](developers/howto/testnet.md)
-  * [Примеры команд к cli\_wallet](https://golos.id/ru--golos/@lindsay/dlya-delegatov-i-derzhatelei-nod-rabochie-komandy-i-metody-cliwallet)
 
 ## Делегатам <a id="witnesses"></a>
 
