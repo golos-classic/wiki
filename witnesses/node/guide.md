@@ -179,6 +179,10 @@ sudo docker logs -f --tail 50 golosd
 
 ![](https://lh4.googleusercontent.com/xfrNK9kKgadic6F7mAiZ3notwNTdG1IxzMwWWtybsdox6VtV9HrXU5LLkQyLBWHPb-GLgKcv39spoG9Heavv4yTQItEQRyc01aJjCi21BfGorCxs6aGyPyYTxgkzea_8iv6QAFzd)
 
+### Телеграм-бот о пропуске блоков
+
+Для отслеживания работы делегатских нод и пропуска ими блоков можно использовать бот [@golos\_witness\_monitor\_bot](https://t.me/golos_witness_monitor_bot)
+
 ## **Работа с cli-wallet**
 
 {% hint style="info" %}
