@@ -1,6 +1,7 @@
 # Руководства \(HowTo\)
 
 * [Скрипт регистрации аккаунтов](registration-service.md)
+* [Создаем сайт на базе блокчейна](https://golos.id/ru--golos/@vik/sozdaem-sobstvennyi-sait-na-baze-blockchain-golosa-za-30-minut)
 * [Как использовать мультиподписи](multisig.md)
 * [Как объединять операции в одну транзакцию](ops-merging.md)
 * [Кэширование API](api-cache.md)
