@@ -214,7 +214,9 @@ service nginx restart
 sudo systemctl status nginx.service
 ```
 
-Мы запустили публичную API-ноду, к которой можно подключаться как по адресу `https://test.lexai.host` \(RPC\) так и `wss://test.lexai.host/ws` \(WebSockets\).
+Мы запустили публичную API-ноду, к которой можно подключаться как по адресу `https://test.lexai.host` \(RPC\) так и `wss://test.lexai.host/ws` \(WebSockets\).  
+  
+Кроме того, если на API-ноду ожидается большое количество запросов, советуем обратить внимание на [сервис Jussi](https://golos.id/ru--golos/@lex/kesh-sloi-jussi-dlya-tekh-kto-zapustil-svoi-api-nody), который позволяет перед нодой настроить кеш-слой на базе Redis и Nginx.
 
 При получении письма на e-mail о необходимости обновить сертификат \(раз в 90 дней\), это можно сделать командой:
 

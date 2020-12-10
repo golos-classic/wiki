@@ -7,7 +7,7 @@
 
 ### Способы регистрации:
 
-* **Сайт** [golos.id](https://golos.id) или [golos.in](https://golos.in) \* если у вас нет почты @gmail.com, вы можете создать её [по ссылке](https://accounts.google.com/signup/v2/webcreateaccount?hl=ru&flowName=GlifWebSignIn&flowEntry=SignUp)  или получить инвайт в телеграм-чате [https://t.me/golos\_id](https://t.me/golos_id) от участников сообщества  Скоро будет добавлена авторизация и через популярные соцсети...  
+* **Сайт** [golos.id](https://golos.id) или [golos.in](https://golos.in) \* если у вас нет почты @gmail.com, вы можете создать её [по ссылке](https://accounts.google.com/signup/v2/webcreateaccount?hl=ru&flowName=GlifWebSignIn&flowEntry=SignUp)  или получить [инвайт](https://golos.id/ru--golos/@lllll1ll/registraciya-akkaunta-po-invait-kodu) в телеграм-чате [https://t.me/golos\_id](https://t.me/golos_id) от участников сообщества  Скоро будет добавлена авторизация и через популярные соцсети...  
 * **Через ВКонтакте** - [vk.com/reg\_golos\_ru](https://vk.com/reg_golos_ru)  
 * **Если уже есть аккаунт, через** [golos.cf](https://golos.cf/reg/)
 

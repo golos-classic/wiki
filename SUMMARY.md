@@ -8,8 +8,8 @@
 * [Старт на Golos Блоги](users/welcome/README.md)
   * [Кошелёк](users/welcome/wallet.md)
 * [Вопросы и ответы](users/faq.md)
-* [Обновления Голоса](users/update.md)
 * [Полезные статьи](users/posts.md)
+* [Обновления Голоса](users/update.md)
 
 ## Разработчикам <a id="developers"></a>
 
