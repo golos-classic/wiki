@@ -81,9 +81,9 @@
 
 ### Ввод и вывод токенов
 
-Токены Голос \(GOLOS\) можно купить/продать через биржи указанные на [https://golos.id/exchanges](https://golos.id/exchanges) \(пока это RuDEX, Livecoin, Coins.Black\), иные формы обмена через внутренний рынок или боты с посредниками.
+Токены Голос \(GOLOS\) можно купить/продать через биржи указанные на [https://golos.id/exchanges](https://golos.id/exchanges) \(пока это RuDEX и Livecoin, обменники Coins.Black и Steem-Engine\), иные формы обмена через внутренний рынок или боты с посредниками.
 
-Возможен обмен токенов Голос \(GOLOS\) на Золотые \(GBG\) и обратно [через внутренний рынок](https://golos.id/market). С октября 2020 г. у пользователей появилась возможность создавать свои токены. С помощью одного из них \([YMRUB](https://golos.id/market/GOLOS/YMRUB)\) - несложно поменять токены \(GOLOS\) на российские рубли через платежную систему ЮMoney \(бывшие Яндекс.Деньги\). Подробнее [тут](https://golos.id/ru--golos/@ecurrex-ru/vvod-i-vyvod-rublei-na-golos) и [тут](https://golos.id/ru--kriptovalyuty/@ultrastod/manual-po-tokenu-ymrub-okno-v-fiat-i-obratno).
+Возможен обмен токенов Голос \(GOLOS\) на Золотые \(GBG\) и обратно [через внутренний рынок](https://golos.id/market).
 
 ## Навигация по сайту
 

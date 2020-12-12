@@ -47,11 +47,7 @@
 
 ## **На каких биржах торгуются токены?**
 
-На данный момент проект поддержан биржами: RuDEX, Livecoin, Steem-Engine, при развитии оборота токенов и ликвидности, будет организован листинг и на более крупных площадках. Актуальный список покупки и продажи токенов доступен на странице [https://golos.id/exchanges](https://golos.id/exchanges)
-
-Возможен обмен токенов Голос и через внутренние UIA активы. Например YMRUB, который в свою очередь один к одному меняется на рубли платежной системы ЮMoney \(экс-Яндекс.Деньги\). Подробнее [тут](https://golos.id/ru--golos/@ecurrex-ru/vvod-i-vyvod-rublei-na-golos) и [тут](https://golos.id/ru--kriptovalyuty/@ultrastod/manual-po-tokenu-ymrub-okno-v-fiat-i-obratno).
-
-Делается это через через [внутренний рынок](https://golos.id/market/GOLOS/YMRUB) \(подробнее о нём можно также прочитать [здесь](https://golos.id/ru--golos/@allforyou/torguem-na-vnutrennei-birzhe-golosa)\).
+На данный момент проект поддержан биржами: RuDEX и LiveCoin, обменниками Coins.Black и Steem-Engine, при развитии оборота токенов и ликвидности, будет организован листинг и на более крупных площадках. Актуальный список доступен на странице [https://golos.id/exchanges](https://golos.id/exchanges)
 
 ## **Как обеспечивается работоспособность сети?**
 
