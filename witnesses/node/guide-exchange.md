@@ -11,7 +11,7 @@ wget https://files.golos.id/cli_wallet && chmod +x cli_wallet
 Запускаем cli\_wallet \(список альтернативных публичных [API-нод](https://golos.id/nodes)\):
 
 ```text
-./cli_wallet -s wss://api-full.golos.id/ws --rpc-http-endpoint 127.0.0.1:8094 --rpc-http-allowip 127.0.0.1
+./cli_wallet -s wss://api.golos.id/ws --rpc-http-endpoint 127.0.0.1:8094 --rpc-http-allowip 127.0.0.1
 ```
 
 Все **параметры запуска** cli\_wallet можно посмотреть командой`./cli_wallet --help`
@@ -50,7 +50,7 @@ import_key 5JX..........
 ```text
 /usr/local/bin/cli_wallet \
   --wallet="/var/lib/golosd/wallet.json" \
-  --server-rpc-endpoint="wss://api-full.golos.id/ws" \
+  --server-rpc-endpoint="wss://api.golos.id/ws" \
   --rpc-http-endpoint="127.0.0.1:8094" \
   --rpc-http-allowip="127.0.0.1"
 ```
@@ -108,7 +108,7 @@ min-free-shared-file-size = 500M
 inc-shared-file-size = 2G
 block-num-check-free-size = 1000
 plugin = chain p2p json_rpc webserver network_broadcast_api database_api operation_history account_history account_by_key
-history-start-block = 37000000
+history-start-block = 42000000
 history-blocks = 864000
 track-account = rudex
 clear-votes-before-block = 4294967295
