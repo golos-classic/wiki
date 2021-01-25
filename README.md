@@ -4,9 +4,9 @@
 
 Эта база знаний \(wiki\) - точка сбора знаний по **блокчейну Голос.**  
   
-Основные веб-клиенты Golos Блоги - [golos.id](https://golos.id/) и [golos.in](https://golos.in/). Доступен и [golos.today](https://golos.today/), который выполняет роль тестового клиента \(обновляется в первую очередь, но его работа возможна с ошибками\).   
+Основные веб-клиенты Golos Блоги - [golos.id](https://golos.id/) и [golos.in](https://golos.in/). Доступен и [golos.today](https://golos.today/), который выполняет роль тестового клиента \(обновляется в первую очередь, но его работа возможна с ошибками\). Из альтернативных [expertgroup.org](https://expertgroup.org/), в сети TOR [goloszrorrdctlwf.onion](http://goloszrorrdctlwf.onion), а также [gol.oss](http://gol.oss) \(при исп. DNS от [OpenNIC](https://www.opennic.org/)\).  
   
-Из альтернативных есть [expertgroup.org](https://expertgroup.org/), в сети TOR [goloszrorrdctlwf.onion](http://goloszrorrdctlwf.onion), а также [gol.oss](http://gol.oss), который доступен при использовании децентрализованных DNS от [OpenNIC](https://www.opennic.org/).
+Веб-клиенты к блокчейну в формате форума, напр. [golostalk.com](https://golostalk.com/).
 
 Начните изучение возможностей с стартового раздела для [Пользователей](users/welcome/).
 

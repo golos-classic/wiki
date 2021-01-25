@@ -6,9 +6,9 @@
 
 ### Способы регистрации:
 
-* **Сайт** [golos.id](https://golos.id) или [golos.in](https://golos.in) \* если у вас нет почты @gmail.com, вы можете создать её [по ссылке](https://accounts.google.com/signup/v2/webcreateaccount?hl=ru&flowName=GlifWebSignIn&flowEntry=SignUp)  или получить [инвайт](https://golos.id/ru--golos/@lllll1ll/registraciya-akkaunta-po-invait-kodu) от участников сообщества написав в телеграм-чат [https://t.me/golos\_id](https://t.me/golos_id)  Скоро будет добавлена и возможность регистрации с помощью соцсетей.  
-* **Через ВКонтакте** - [vk.com/reg\_golos\_ru](https://vk.com/reg_golos_ru)  
-* **Если уже есть аккаунт, через** [golos.cf](https://golos.cf/reg/)
+* **Сайт** [golos.id](https://golos.id) или [golos.in](https://golos.in) \(с помощью почты @gmail.com, [инвайта](https://golos.id/ru--golos/@lllll1ll/registraciya-akkaunta-po-invait-kodu) от участника сообщества или через авторизацию ВКонтакте, Фейсбуке, Mail.ru или Яндексе 
+* **Через бота ВКонтакте** - [vk.com/reg\_golos\_ru](https://vk.com/reg_golos_ru)  
+* **Если уже есть аккаунт, на** [golos.cf](https://golos.cf/reg/)
 
   Зайдите на страницу, укажите логин и активный ключ регистратора, желаемые логин и пароль для нового аккаунта. Необходимо иметь на счету минимум 3 токена GOLOS. При создании аккаунта они будут переведены в Силу Голоса нового аккаунта.
 
