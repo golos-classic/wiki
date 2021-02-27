@@ -53,6 +53,7 @@
   * [Гайд для witness/seed ноды](witnesses/node/guide.md)
   * [Настройка для API-ноды](witnesses/node/guide-api.md)
   * [Настройка ноды для бирж](witnesses/node/guide-exchange.md)
+  * [Настройка ElasticSearch](witnesses/node/elasticsearch.md)
 * [Медианные параметры](witnesses/median-props.md)
 * [Скрипты для price feed](witnesses/price-feed.md)
 
