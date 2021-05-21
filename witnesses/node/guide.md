@@ -141,6 +141,7 @@ store-memo-in-savings-withdraws = false
 replay-if-corrupted = true
 skip-virtual-ops = true
 enable-stale-production = false
+required-participation = 33
 witness = "ЛОГИН-ДЕЛЕГАТА"
 private-key = ПРИВАТНЫЙ-КЛЮЧ-НОДЫ
 mining-threads = 0
