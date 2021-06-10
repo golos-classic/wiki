@@ -157,6 +157,12 @@ level=none
 appenders=stderr' | sudo tee -a ~/config/config.ini
 ```
 
+### Использование Docker-Compose
+
+{% hint style="info" %}
+Для тех кто разбирается, обратите внимание на [этот пост](https://golos.id/ru--golos/@lex/variant-zapuska-nody-s-docker-compose).
+{% endhint %}
+
 ### **Запускаем контейнер**
 
 ```text
