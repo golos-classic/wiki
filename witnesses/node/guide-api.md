@@ -56,13 +56,15 @@ shared-file-size = 2G
 min-free-shared-file-size = 500M
 inc-shared-file-size = 2G
 block-num-check-free-size = 1000
-plugin = chain p2p json_rpc webserver network_broadcast_api witness database_api witness_api follow social_network tags operation_history account_history market_history account_by_key worker_api account_notes
+plugin = chain p2p json_rpc webserver network_broadcast_api witness database_api witness_api
+plugin = social_network follow tags operation_history account_history market_history
+plugin = account_by_key worker_api private_message account_notes
 clear-votes-before-block = 4294967295
 history-start-block = 38000000
+history-blocks = 202800
 comment-title-depth = 202800
 comment-body-depth = 202800
 comment-json-metadata-depth = 202800
-history-blocks = 202800
 replay-if-corrupted = true
 skip-virtual-ops = false
 enable-stale-production = false
@@ -87,7 +89,8 @@ sudo docker run -it \
     -p 127.0.0.1:8091:8091 \
     -v ~/config/config.ini:/etc/golosd/config.ini \
     -v ~/home/blockchain:/var/lib/golosd/blockchain \
-    --name golosd golosblockchain/golos:latest
+    --log-opt max-size=500m
+    --name golosd golosblockchain/golos:api-node
 ```
 
 После загрузки докер-образа и реплея \(который занимает несколько часов\), с получением логов вида `handle_block "Got 0 transactions on block 35071930 by ..."` нода готова к работе.
@@ -167,19 +170,19 @@ proxy_read_timeout 3600;
 ## Устанавливаем Certbot
 
 ```text
-sudo apt-get install software-properties-common
+sudo snap install core
 ```
 
 ```text
-sudo add-apt-repository ppa:certbot/certbot -y
+sudo snap refresh core
 ```
 
 ```text
-sudo apt-get update
+sudo snap install --classic certbot
 ```
 
 ```text
-sudo apt-get install python-certbot-nginx -y
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
 После следующей команды потребуется ввести:

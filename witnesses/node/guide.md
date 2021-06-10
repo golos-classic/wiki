@@ -165,6 +165,7 @@ sudo docker run -it \
     -v ~/config/config.ini:/etc/golosd/config.ini \
     -v ~/home/blockchain:/var/lib/golosd/blockchain \
     -v ~/wallet:/golosd \
+    --log-opt max-size=500m
     --name golosd golosblockchain/golos:latest
 ```
 
@@ -245,6 +246,7 @@ sudo docker run -it \
     -e NODE=ws://localhost:8091 \
     -e WITNESS=ЛОГИН-ДЕЛЕГАТА \
     -e KEY=ПРИВАТНЫЙ-АКТИВНЫЙ-КЛЮЧ \
+    --log-opt max-size=500m
     --name feed --net=container:golosd vvk123/golos-witness-tools ./update_price_feed.py --monitor
 ```
 
@@ -359,6 +361,7 @@ sudo docker run -it \
     -v ~/config/config.ini:/etc/golosd/config.ini \
     -v ~/home/blockchain:/var/lib/golosd/blockchain \
     -v ~/wallet:/golosd \
+    --log-opt max-size=500m
     --name golosd golosblockchain/golos:latest
 ```
 
@@ -379,6 +382,7 @@ sudo docker run -it \
     -e NODE=ws://localhost:8091 \
     -e WITNESS=ЛОГИН-ДЕЛЕГАТА \
     -e KEY=ПРИВАТНЫЙ-АКТИВНЫЙ-КЛЮЧ \
+    --log-opt max-size=500m
     --name feed --net=container:golosd vvk123/golos-witness-tools ./update_price_feed.py --monitor
 ```
 
