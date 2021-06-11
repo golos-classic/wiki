@@ -89,7 +89,7 @@ sudo docker run -it \
     -p 127.0.0.1:8091:8091 \
     -v ~/config/config.ini:/etc/golosd/config.ini \
     -v ~/home/blockchain:/var/lib/golosd/blockchain \
-    --log-opt max-size=500m
+    --log-opt max-size=500m \
     --name golosd golosblockchain/golos:api-node
 ```
 
