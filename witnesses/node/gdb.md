@@ -2,9 +2,9 @@
 description: Установка ноды на сервере с ОС Ubuntu 16.04
 ---
 
-# Нода с GDB
+# Нода с отладкой GDB
 
-Бывает, что из-за ошибок демон golosd вылетает с сообщением Segmentation fault \(core dumped\) или Aborted \(core dumped\). При этом больше никакой информации может не быть. В таком случае пригодится отладка через [gdb](https://ru.wikipedia.org/wiki/GNU_Debugger).
+Бывает, что из-за ошибок демон golosd вылетает с сообщением Segmentation fault или Aborted, в папке /var/lib/golosd появляется core dumped. При этом больше никакой информации. В таком случае пригодится отладка через [gdb](https://ru.wikipedia.org/wiki/GNU_Debugger).
 
 Устанавливаем необходимые пакеты:
 
@@ -72,9 +72,22 @@ cmake \
 make -j $(nproc) && sudo make install
 ```
 
+## Подготовка файлов
+
+```text
+mkdir -p ~/golos/build/programs/golosd/witness_node_data_dir/blockchain
+```
+
+Копируем в папку `.../golosd/witness_node_data_dir` свой конфиг для ноды, добавив сид-ноды, напр.  
+  
+`p2p-seed-node = golos1.lexai.host:4243  
+p2p-seed-node = golos2.lexai.host:4243`  
+  
+Копируем в папку `.../golosd/witness_node_data_dir/blockchain` бэкап файлов блоклогс и шаред-мемори, чтобы не терять время на синхронизацию сети \(копии возможно скачать [здесь](https://wiki.golos.id/witnesses/node/guide#ustanavlivaem-nodu)\).
+
 ## Запуск GDB
 
-Устанавливаем отладчик gdb:
+Устанавливаем отладчик gdb
 
 ```text
 sudo apt-get install gdb
@@ -83,21 +96,19 @@ sudo apt-get install gdb
 Переходим в папку проекта
 
 ```text
-cd programs/golosd
+cd ~/golos/build/programs/golosd
 ```
 
-Создаём папку
-
-```text
-mkdir witness_node_data_dir
-```
-
-Копируем в неё \(путь `golos/build/programs/golosd/witness_node_data_dir` \) свой конфиг для ноды, а создав вложенную папку `blockchain` закидываем туда бэкап блоклогс и шаред-мемори файлов.  
-  
-Запускаем демон через gdb: 
+Запускаем демон через gdb
 
 ```text
 gdb ./golosd
+```
+
+Включаем сохранение лога \(в файл gdb.txt\) рядом с файлом запуска
+
+```text
+set logging on
 ```
 
 Подтверждаем запуск

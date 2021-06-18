@@ -54,7 +54,7 @@
   * [Настройка для API-ноды](witnesses/node/guide-api.md)
   * [Настройка ноды для бирж](witnesses/node/guide-exchange.md)
   * [Настройка ElasticSearch](witnesses/node/elasticsearch.md)
-  * [Нода с GDB](witnesses/node/gdb.md)
+  * [Нода с отладкой GDB](witnesses/node/gdb.md)
 * [Медианные параметры](witnesses/median-props.md)
 * [Скрипты для price feed](witnesses/price-feed.md)
 
