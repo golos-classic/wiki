@@ -214,5 +214,5 @@ curl --data '{"jsonrpc": "2.0", "method": "get_block", "params": ["30000000"], "
 curl --data '{"jsonrpc": "2.0", "method": "get_ops_in_block", "params": ["30000000","false"], "id": 1}' http://127.0.0.1:8094
 ```
 
-Описание команд к cli\_wallet также есть [здесь](../../developers/api/cli-wallet.md) или можно сформировать формат пользуясь сервисом [https://api.dpos.space/steemjs/api/](https://api.dpos.space/steemjs/api/)
+Описание команд к cli\_wallet также есть [здесь](../../developers/api/cli-wallet.md) или можно сформировать формат пользуясь сервисом [https://gapi.golos.today/steemjs/api/](https://gapi.golos.today/steemjs/api/)
 

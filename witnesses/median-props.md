@@ -2,7 +2,7 @@
 
 Ряд параметров блокчейна являются голосуемыми, т.е. делегаты подают свои значения, из которых потом формируются некие консенсусные значения.
 
-Медианные параметры сети доступны на [https://explorer.golos.id](https://explorer.golos.id) или на [https://api.dpos.space/steemjs/api/database\_api/get\_dynamic\_global\_properties](https://api.dpos.space/steemjs/api/database_api/get_dynamic_global_properties)
+Медианные параметры сети доступны на [https://explorer.golos.id](https://explorer.golos.id) или на [https://gapi.golos.today/steemjs/api/database\_api/get\_chain\_properties](https://gapi.golos.today/steemjs/api/database_api/get_chain_properties)
 
 ## Курс GBG/GOLOS
 
