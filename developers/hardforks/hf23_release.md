@@ -14,7 +14,7 @@
 
 TIP-баланс можно пополнять с основного баланса \(операция `transfer_to_tip`\), выводить токены, полученные на TIP-баланс, возможно через увеличение Силы Голоса \(операция `transfer_from_tip`\).  
   
-Команды для тестирования через cli\_wallet можно найти в [этом ](https://golos.id/ru--golos/@lex/23-khardfork-uzhe-blizko-predlagayu-delegatam-potestirovat)посте, примеры сериализации к новым операциям в [обновлении](https://github.com/golos-blockchain/golos-js/commit/6d85d634205ee12b7ec43ed13b1d006f61291c64) JS библиотеки.
+Команды для тестирования через cli\_wallet можно найти в [этом ](https://golos.id/ru--golos/@lex/23-khardfork-uzhe-blizko-predlagayu-delegatam-potestirovat)посте, примеры сериализации к новым операциям в [обновлении](https://github.com/golos-blockchain/golos-lib-js/commit/6d85d634205ee12b7ec43ed13b1d006f61291c64) JS библиотеки.
 
 ## Снижение срока понижения СГ
 

@@ -8,7 +8,7 @@
 
 ## JavaScript
 
-Фаворит для разработки приложений [библиотека golos-js](https://github.com/golos-blockchain/golos-js). В нем есть поддержка всего что нужно как для серверного \(nodejs\), так и для пользовательского \(js в браузерах\) взаимодействия с Golos:
+Фаворит для разработки приложений [библиотека golos-lib-js](https://github.com/golos-blockchain/golos-lib-js). В нем есть поддержка всего что нужно как для серверного \(nodejs\), так и для пользовательского \(js в браузерах\) взаимодействия с Golos:
 
 * Создание и кодирование ключей;
 * API-запросы;
@@ -16,7 +16,7 @@
 * Упрощенный конструктор транзакций для операций;
 * Функции обратного вызова для запросов;
 
-[Документация golos-js на английском языке](https://github.com/golos-blockchain/golos-js/tree/master/doc) доступна на GitHub. Примеры для часто использумых операций смотрите в [разделе Примеры кода](code-examples.md).
+[Документация golos-lib-js на английском языке](https://github.com/golos-blockchain/golos-lib-js/tree/master/doc) доступна на GitHub. Примеры для часто использумых операций смотрите в [разделе Примеры кода](code-examples.md).
 
 ## Python
 
@@ -32,7 +32,7 @@
 
 ## GO
 
-[Библиотека golos-go](https://github.com/golos-blockchain/golos-go) от [@asuleymanov](https://golos.id/@asuleymanov) также подходит для API запросов и изучения формирования транзакций.
+[Библиотека golos-lib-go](https://github.com/golos-blockchain/golos-lib-go) от [@asuleymanov](https://golos.id/@asuleymanov) также подходит для API запросов и изучения формирования транзакций.
 
 ## Другое
 

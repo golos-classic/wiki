@@ -25,7 +25,7 @@
 **Node JS**
 
 * Поставьте nodeJS
-* Установите библиотеку golos-js `npm install golos-js`
+* Установите библиотеку golos-lib-js `npm install golos-lib-js`
 * Скачайте файл accountregistartor.js
 
 [https://github.com/vikxx/robot/blob/master/accountregistartor.js](https://github.com/vikxx/robot/blob/master/accountregistartor.js)
@@ -38,7 +38,7 @@ const NAME = "nickname123"
 const PASS = "MyStrongPass1234567890"
 
 
-const golos = require('golos-js')
+const golos = require('golos-lib-js')
 golos.config.set('websocket', "wss://api.golos.blckchnd.com/ws")
 
 // Данные создателя аккаунта

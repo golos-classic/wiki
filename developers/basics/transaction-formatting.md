@@ -34,7 +34,7 @@
 * Кодируем полученный бинарный результат через base58 алгоритм с использованием алфавита: `123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz`;
 * Добавляем префикс сети \(строковое значение `GOLOS`\);
 
-В библиотеке golos-js используется модуль `auth` \([ссылка на GitHub](https://github.com/golos-blockchain/golos-js/blob/master/src/auth/index.js)\), который позволяет предустановленными методами работать с ключами и подписывать данные.
+В библиотеке golos-lib-js используется модуль `auth` \([ссылка на GitHub](https://github.com/golos-blockchain/golos-lib-js/blob/master/src/auth/index.js)\), который позволяет предустановленными методами работать с ключами и подписывать данные.
 
 ## Представление разных типов данных в бинарном виде
 

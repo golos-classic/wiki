@@ -36,7 +36,7 @@
 require('events').EventEmitter.prototype._maxListeners = 100000
 const Promise = require("bluebird")
 const _ = require('lodash')
-const golos = require("golos-js")
+const golos = require("golos-lib-js")
 const redis = require("redis")
 const client = redis.createClient()
 golos.config.set('websocket','ws://localhost:9090')
