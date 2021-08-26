@@ -9,7 +9,7 @@
   * [Кошелёк](users/welcome/wallet.md)
 * [Вопросы и ответы](users/faq.md)
 * [Полезные статьи](users/posts.md)
-* [Обновления Голоса](users/update.md)
+* [Обновления на Голосе](users/update.md)
 
 ## Разработчикам <a id="developers"></a>
 
