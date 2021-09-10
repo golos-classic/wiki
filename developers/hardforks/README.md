@@ -10,4 +10,8 @@
 * [HF22: Новые возможности](hf22_release.md)
 * [HF23: Новые возможности](hf23_release.md)
 * [HF24: Новые возможности](hf24-novye-vozmozhnosti.md)
+* [HF25: Новые возможности](hf25_release.md)
+* [HF26: Новые возможности](hf26_release.md)
+
+  
 

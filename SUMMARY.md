@@ -40,6 +40,7 @@
   * [HF23: Новые возможности](developers/hardforks/hf23_release.md)
   * [HF24: Новые возможности](developers/hardforks/hf24-novye-vozmozhnosti.md)
   * [HF25: Новые возможности](developers/hardforks/hf25_release.md)
+  * [HF26: Новые возможности](developers/hardforks/hf26_release.md)
 * [Руководства \(HowTo\)](developers/howto/README.md)
   * [Скрипт регистрации аккаунтов](developers/howto/registration-service.md)
   * [Как использовать мультиподписи](developers/howto/multisig.md)
