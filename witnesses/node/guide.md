@@ -303,7 +303,7 @@ update_chain_properties ЛОГИН {"max_referral_interest_rate":1000, "max_refe
 
 {% tab title="22 ХФ" %}
 ```
-update_chain_properties ЛОГИН {"worker_reward_percent":1000, "witness_reward_percent":1500, "vesting_reward_percent":6500, "worker_request_creation_fee":"100.000 GBG", "worker_request_approve_min_percent":1500, "sbd_debt_convert_rate":100, "vote_regeneration_per_day":10, "witness_skipping_reset_time":21600, "witness_idleness_time":7776000, "account_idleness_time":15552000} true
+update_chain_properties ЛОГИН {"worker_request_creation_fee":"100.000 GBG", "worker_request_approve_min_percent":1500, "sbd_debt_convert_rate":100, "vote_regeneration_per_day":10, "witness_skipping_reset_time":21600, "witness_idleness_time":7776000, "account_idleness_time":15552000} true
 
 ```
 {% endtab %}
@@ -318,6 +318,13 @@ update_chain_properties ЛОГИН {"claim_idleness_time":86400, "min_invite_bal
 {% tab title="24 ХФ" %}
 ```
 update_chain_properties ЛОГИН {"asset_creation_fee":"2000.000 GBG", "invite_transfer_interval_sec":60} true
+
+```
+{% endtab %}
+
+{% tab title="26 ХФ" %}
+```
+update_chain_properties ЛОГИН {"worker_emission_percent":100, "vesting_of_remain_percent":8000, "convert_fee_percent":500, "min_golos_power_to_curate":"1000.000 GOLOS", "negrep_posting_window":1440, "negrep_posting_per_window":3} true
 
 ```
 {% endtab %}
