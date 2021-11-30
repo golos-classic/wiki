@@ -6,6 +6,16 @@ description: >-
 
 # Обновления на Голосе
 
+## Ноябрь 2021
+
+### Доработка интерфейса UIA-активов
+
+Правила по депозиту и выводу UIA-токенов, запоминание и шифрование заметок. Эмитентам активов (создателям альтернативных UIA) токенов легче задавать необходимые пользователям подсказки для автоматизации. Добавлено [отображение токенов из ордеров](https://golos.id/ru--golos/@lex/balansy-tokenov-s-birzhi-utilita-analiza-dannykh-nod-obnovlenie-komponentov-i-prochee) на бирже (с возможностью отмены и перехода к торговым парам). [Подробнее >](https://golos.id/ru--golos/@lex/obnovlenie-interfeisa-uia-aktivov-servisa-ui-api-shifrovaniya-zapominaniya-memo-biblioteki-golos-lib-js)
+
+### Сервис Golos OAuth
+
+На базе сервиса регистрации был добавлен функционал OAuth [golos.app](https://golos.app) и подписи транзакций (GolosSigner), что расширяет возможности для клиентов/приложений блокчейна авторизовывать пользователей без запроса пароля/ключей. [Подробнее >](https://golos.id/ru--golos/@lex/golos-app-i-funkcional-oauth-signer-rasshirenie-uvedomlenii-i-prochie-pravki)
+
 ## Сентябрь 2021
 
 26 хардфорк (обновление протокола блокчейна)
