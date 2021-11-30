@@ -2,7 +2,7 @@
 
 * [База знаний Golos](README.md)
 
-## ПОЛЬЗОВАТЕЛЯМ <a id="users"></a>
+## ПОЛЬЗОВАТЕЛЯМ <a href="#users" id="users"></a>
 
 * [Способы регистрации](users/registration.md)
 * [Старт на Golos Блоги](users/welcome/README.md)
@@ -11,43 +11,44 @@
 * [Полезные статьи](users/posts.md)
 * [Обновления на Голосе](users/update.md)
 
-## Разработчикам <a id="developers"></a>
+## Разработчикам <a href="#developers" id="developers"></a>
 
 * [Основы](developers/basics/README.md)
   * [Операции и их типы](developers/basics/operations.md)
   * [Объекты и структуры](developers/basics/object-structures.md)
-  * [Состояние \(стэйт\) системы](developers/basics/state.md)
+  * [Состояние (стэйт) системы](developers/basics/state.md)
   * [Плагины и их API](developers/basics/plugins-api.md)
   * [Библиотеки для работы](developers/basics/libraries.md)
   * [Примеры кода](developers/basics/code-examples.md)
   * [Формирование транзакций](developers/basics/transaction-formatting.md)
   * [Пропускная способность](developers/basics/bandwidth.md)
+  * [Тестнет (ноды для тестов)](developers/basics/testnet.md)
 * [API-документация](developers/api/README.md)
   * [API part 1](developers/api/api-golos-ch1.md)
   * [API part 2](developers/api/api-golos-ch2.md)
   * [API part 3](developers/api/api-golos-ch3.md)
   * [API part 4](developers/api/api-golos-ch4.md)
   * [Cli-wallet API](developers/api/cli-wallet.md)
-* [Обновления \(HardForks\)](developers/hardforks/README.md)
-  * [HF18: Данные по установке](developers/hardforks/hf18_instruction.md)
-  * [HF18: Новые возможности](developers/hardforks/hf18_release.md)
-  * [HF18: Изменения в API](developers/hardforks/hf18_api_changes.md)
-  * [HF18: Изменения в cli\_wallet](developers/hardforks/hf18_cli_wallet_changes.md)
-  * [SF18.4: Новые функции](developers/hardforks/sf18.4_release.md)
-  * [HF19: Новые возможности](developers/hardforks/hf19_release.md)
-  * [HF20: Устранение бага](developers/hardforks/hf20_release.md)
-  * [HF22: Новые возможности](developers/hardforks/hf22_release.md)
-  * [HF23: Новые возможности](developers/hardforks/hf23_release.md)
+* [Обновления (HardForks)](developers/hardforks/README.md)
+  * [HF18: Данные по установке](developers/hardforks/hf18\_instruction.md)
+  * [HF18: Новые возможности](developers/hardforks/hf18\_release.md)
+  * [HF18: Изменения в API](developers/hardforks/hf18\_api\_changes.md)
+  * [HF18: Изменения в cli\_wallet](developers/hardforks/hf18\_cli\_wallet\_changes.md)
+  * [SF18.4: Новые функции](developers/hardforks/sf18.4\_release.md)
+  * [HF19: Новые возможности](developers/hardforks/hf19\_release.md)
+  * [HF20: Устранение бага](developers/hardforks/hf20\_release.md)
+  * [HF22: Новые возможности](developers/hardforks/hf22\_release.md)
+  * [HF23: Новые возможности](developers/hardforks/hf23\_release.md)
   * [HF24: Новые возможности](developers/hardforks/hf24-novye-vozmozhnosti.md)
-  * [HF25: Новые возможности](developers/hardforks/hf25_release.md)
-  * [HF26: Новые возможности](developers/hardforks/hf26_release.md)
-* [Руководства \(HowTo\)](developers/howto/README.md)
+  * [HF25: Новые возможности](developers/hardforks/hf25\_release.md)
+  * [HF26: Новые возможности](developers/hardforks/hf26\_release.md)
+* [Руководства (HowTo)](developers/howto/README.md)
   * [Скрипт регистрации аккаунтов](developers/howto/registration-service.md)
   * [Как использовать мультиподписи](developers/howto/multisig.md)
   * [Как объединять операции в одну транзакцию](developers/howto/ops-merging.md)
   * [Пример запуска тестнета](developers/howto/testnet.md)
 
-## Делегатам <a id="witnesses"></a>
+## Делегатам <a href="#witnesses" id="witnesses"></a>
 
 * [Делегатство и роли нод](witnesses/basics.md)
 * [Установка ноды](witnesses/node/README.md)
@@ -58,4 +59,3 @@
   * [Нода с отладкой GDB](witnesses/node/gdb.md)
 * [Медианные параметры](witnesses/median-props.md)
 * [Скрипты для price feed](witnesses/price-feed.md)
-

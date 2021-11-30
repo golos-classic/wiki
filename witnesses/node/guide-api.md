@@ -1,14 +1,14 @@
 # Настройка для API-ноды
 
-Публичные API-ноды важная составляющая для блокчейна, особенно когда есть заинтересованность в развитии приложений \(клиентов, ботов, скриптов, игр и пр.\), которые часто повышают ценность всего проекта.
+Публичные API-ноды важная составляющая для блокчейна, особенно когда есть заинтересованность в развитии приложений (клиентов, ботов, скриптов, игр и пр.), которые часто повышают ценность всего проекта.
 
-Ниже описан вариант установки API-ноды \(с хранением истории операций за неделю\). Для такой, оптимальный вариант - сервер с 16 Гб оперативной памяти и 80 Гб SSD накопителя.
+Ниже описан вариант установки API-ноды (с хранением истории операций за неделю). Для такой, оптимальный вариант - сервер с 16 Гб оперативной памяти и 80 Гб SSD накопителя.
 
 ## Устанавливаем ноду
 
-Устанавливаем [Docker](https://wiki.golos.id/witnesses/node/guide#ustanavlivaem-docker) \(если его ещё нет\).
+Устанавливаем [Docker](https://wiki.golos.id/witnesses/node/guide#ustanavlivaem-docker) (если его ещё нет).
 
-Скачиваем большую часть блоков напрямую с сервера \(чтобы не тратить более суток на их получение и лишнюю нагрузку делегатских seed-нод\).
+Скачиваем большую часть блоков напрямую с сервера (чтобы не тратить более суток на их получение и лишнюю нагрузку делегатских seed-нод).
 
 {% tabs %}
 {% tab title="Германия 1" %}
@@ -26,23 +26,23 @@ wget -P ~/home/blockchain --user=u245960-sub1 --password=7USy9jS9GS2Yka3c https:
 {% endtab %}
 
 {% tab title="Германия 2" %}
-```text
+```
 wget -P ~/home/blockchain --user=u223265-sub1 --password=tXjXAmNBcu8PmmbQ https://u223265-sub1.your-storagebox.de/block_log.index https://u223265-sub1.your-storagebox.de/block_log
 
 ```
 {% endtab %}
 
 {% tab title="Финляндия 2" %}
-```text
+```
 wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https://u233417-sub1.your-storagebox.de/block_log.index https://u233417-sub1.your-storagebox.de/block_log
 
 ```
 {% endtab %}
 {% endtabs %}
 
-Добавляем конфиг ноды \(указанные в нём `202800` блоков = неделя\). Какие плагины нужны для ваших целей, можно уточнить в чате делегатов [https://t.me/golos\_witnesses](https://t.me/golos_witnesses)
+Добавляем конфиг ноды (указанные в нём `202800` блоков = неделя). Какие плагины нужны для ваших целей, можно уточнить в чате делегатов [https://t.me/golos\_witnesses](https://t.me/golos\_witnesses)
 
-```text
+```
 mkdir ~/config && echo 'webserver-thread-pool-size = 2
 webserver-http-endpoint = 0.0.0.0:8090
 webserver-ws-endpoint = 0.0.0.0:8091
@@ -83,7 +83,7 @@ appenders=stderr' | sudo tee -a ~/config/config.ini
 
 Запускаем ноду в докер-контейнере.
 
-```text
+```
 sudo docker run -it \
     -p 127.0.0.1:8090:8090 \
     -p 127.0.0.1:8091:8091 \
@@ -93,31 +93,31 @@ sudo docker run -it \
     --name golosd golosblockchain/golos:api-node
 ```
 
-После загрузки докер-образа и реплея \(который занимает несколько часов\), с получением логов вида `handle_block "Got 0 transactions on block 35071930 by ..."` нода готова к работе.
+После загрузки докер-образа и реплея (который занимает несколько часов), с получением логов вида `handle_block "Got 0 transactions on block 35071930 by ..."` нода готова к работе.
 
 ## Устанавливаем Nginx
 
-```text
+```
 sudo apt-add-repository ppa:nginx/stable -y
 ```
 
-```text
+```
 sudo apt-get update
 ```
 
-```text
+```
 sudo apt-get install nginx -y
 ```
 
 Добавляем файл для своих настроек Nginx.
 
-```text
+```
 sudo nano /etc/nginx/sites-enabled/node.conf
 ```
 
-Копируем в него правила, предварительно заменив адрес `server_name` на свой субдомен/домен \(не забыв привязать его в настройках DNS к нашему IP сервера\). Бесплатные домены можно зарегистрировать напр. [здесь](http://www.freenom.com/ru/freeandpaiddomains.html).
+Копируем в него правила, предварительно заменив адрес `server_name` на свой субдомен/домен (не забыв привязать его в настройках DNS к нашему IP сервера). Бесплатные домены можно зарегистрировать напр. [здесь](http://www.freenom.com/ru/freeandpaiddomains.html).
 
-```text
+```
 server {
 listen 80;
 server_name test.lexai.host;
@@ -169,37 +169,37 @@ proxy_read_timeout 3600;
 
 ## Устанавливаем Certbot
 
-```text
+```
 sudo snap install core
 ```
 
-```text
+```
 sudo snap refresh core
 ```
 
-```text
+```
 sudo snap install --classic certbot
 ```
 
-```text
+```
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
 После следующей команды потребуется ввести:
 
-1. E-mail, на который будут отправляться уведомления о необходимости продления сертификата; 
+1. E-mail, на который будут отправляться уведомления о необходимости продления сертификата;&#x20;
 2. Согласиться с правилами сервиса введя `A и Enter`;
 3. Отказаться от рассылки `N и Enter`;
 4. Подтвердить добавление сертификатов к указанным доменам вводом `Enter`;
 5. Отказаться от редиректа, введя `1 и Enter`.
 
-```text
+```
 sudo certbot --nginx
 ```
 
 Будут добавлены настройки в файл `node.conf`, которые можно перепроверить командой ниже и найти строки с пометкой `# managed by Certbot` в конце файла.
 
-```text
+```
 sudo nano /etc/nginx/sites-enabled/node.conf
 ```
 
@@ -207,27 +207,26 @@ sudo nano /etc/nginx/sites-enabled/node.conf
 
 Перезапускаем Nginx.
 
-```text
+```
 service nginx restart
 ```
 
 Проверяем статус Nginx.
 
-```text
+```
 sudo systemctl status nginx.service
 ```
 
-Мы запустили публичную API-ноду, к которой можно подключаться как по адресу `https://test.lexai.host` \(RPC\) так и `wss://test.lexai.host/ws` \(WebSockets\).  
-  
+Мы запустили публичную API-ноду, к которой можно подключаться как по адресу `https://test.lexai.host` (RPC) так и `wss://test.lexai.host/ws` (WebSockets).\
+\
 Кроме того, если на API-ноду ожидается большое количество запросов, советуем обратить внимание на [сервис Jussi](https://golos.id/ru--golos/@lex/kesh-sloi-jussi-dlya-tekh-kto-zapustil-svoi-api-nody), который позволяет перед нодой настроить кеш-слой на базе Redis и Nginx.
 
-При получении письма на e-mail о необходимости обновить сертификат \(раз в 90 дней\), это можно сделать командой:
+При получении письма на e-mail о необходимости обновить сертификат (раз в 90 дней), это можно сделать командой:
 
-```text
+```
 sudo certbot renew
 ```
 
 ## Есть вопросы?
 
-Можно уточнить в чате делегатов [https://t.me/golos\_witnesses](https://t.me/golos_witnesses)
-
+Можно уточнить в чате делегатов [https://t.me/golos\_witnesses](https://t.me/golos\_witnesses)

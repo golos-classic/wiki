@@ -1,20 +1,20 @@
 ---
-description: 'https://golos.id/@lex/vnutrennii-poisk-na-golose-naidyotsya-vsyo'
+description: https://golos.id/@lex/vnutrennii-poisk-na-golose-naidyotsya-vsyo
 ---
 
 # Настройка ElasticSearch
 
-## Установка ElasticSearch \([ссылка](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html)\)
+## Установка ElasticSearch ([ссылка](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html))
 
-```text
+```
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 ```
 
-```text
+```
 echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-7.x.list
 ```
 
-```text
+```
 sudo apt-get update && sudo apt-get install elasticsearch
 ```
 
@@ -22,7 +22,7 @@ sudo apt-get update && sudo apt-get install elasticsearch
 
 Добавить в конфиг `/etc/elasticsearch/elasticsearch.yml`
 
-```text
+```
 network.host: 0.0.0.0
 xpack.security.enabled: true
 discovery.type: single-node 
@@ -33,25 +33,25 @@ http.cors.allow-headers: Content-Type,Authorization
 
 Перезапуск для применения настроек
 
-```text
+```
 sudo service elasticsearch restart
 ```
 
 ### Устанавливаем пароли на доступы
 
-```text
+```
 /usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive
 ```
 
-В конфиг ноды позднее нужно добавить пароль заданный к роли **elastic** \(для примера ****123456\). Перезапуск для применения настроек
+В конфиг ноды позднее нужно добавить пароль заданный к роли **elastic** (для примера **** 123456). Перезапуск для применения настроек
 
-```text
+```
 sudo service elasticsearch restart
 ```
 
 ### Добавляем read-only роль `golosclient`
 
-```text
+```
 curl -u elastic:123456 -XPOST 'localhost:9200/_xpack/security/role/golosclient_readonly_role' \
 -H 'Content-Type: application/json' \
 -d'{"indices":[{"names":"*","privileges":["read"]}]}'
@@ -59,7 +59,7 @@ curl -u elastic:123456 -XPOST 'localhost:9200/_xpack/security/role/golosclient_r
 
 ### Добавляем read-only пользователя `golosclient`
 
-```text
+```
 curl -u elastic:123456 -XPOST localhost:9200/_xpack/security/user/golosclient \
 -H 'Content-Type: application/json' \
 -d'{"roles":["golosclient_readonly_role"],"password":"golosclient"}'
@@ -67,7 +67,7 @@ curl -u elastic:123456 -XPOST localhost:9200/_xpack/security/user/golosclient \
 
 Перезапуск для применения настроек
 
-```text
+```
 sudo service elasticsearch restart
 ```
 
@@ -77,7 +77,7 @@ sudo service elasticsearch restart
 
 В конфиг ноды добавляем параметры:
 
-```text
+```
 elastic-search-uri = http://172.17.0.1:9200
 elastic-search-login = elastic
 elastic-search-password = 123456
@@ -91,31 +91,31 @@ elastic-search-password = 123456
 
 Количество элементов в индексе
 
-```text
+```
 curl -u golosclient:golosclient -XGET https://betasearch.golos.today/blog/post/_count?pretty
 ```
 
 Пример запроса поста из базы
 
-```text
+```
 curl -u golosclient:golosclient -XGET https://betasearch.golos.today/blog/post/lex.vnutrennii-poisk-na-golose-naidyotsya-vsyo?pretty
 ```
 
 Пример запроса статистики ElasticSearch
 
-```text
+```
 curl -u elastic:123456 -XGET "http://localhost:9200/_stats?pretty"
 ```
 
 Mapping всех типов индекса blog:
 
-```text
+```
 curl -u elastic:123456 -XGET "http://localhost:9200/blog/_mapping?pretty"
 ```
 
 Ответ
 
-```text
+```
 {
   "blog" : {
     "mappings" : {
@@ -260,4 +260,3 @@ curl -u elastic:123456 -XGET "http://localhost:9200/blog/_mapping?pretty"
   }
 }
 ```
-
