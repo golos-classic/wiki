@@ -48,60 +48,50 @@ sudo apt-get install docker-ce -y
 {% tab title="Германия 1" %}
 ```
 wget -P ~/home/blockchain --user=u237308-sub1 --password=3oOk8579Ff8ceKdy https://u237308-sub1.your-storagebox.de/block_log.index https://u237308-sub1.your-storagebox.de/block_log
-
 ```
 {% endtab %}
 
 {% tab title="Финляндия 1" %}
 ```
 wget -P ~/home/blockchain --user=u245960-sub1 --password=7USy9jS9GS2Yka3c https://u245960-sub1.your-storagebox.de/block_log.index https://u245960-sub1.your-storagebox.de/block_log
-
 ```
 {% endtab %}
 
 {% tab title="Германия 2" %}
 ```
 wget -P ~/home/blockchain --user=u223265-sub1 --password=tXjXAmNBcu8PmmbQ https://u223265-sub1.your-storagebox.de/block_log.index https://u223265-sub1.your-storagebox.de/block_log
-
 ```
 {% endtab %}
 
 {% tab title="Финляндия 2" %}
 ```
 wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https://u233417-sub1.your-storagebox.de/block_log.index https://u233417-sub1.your-storagebox.de/block_log
-
 ```
 {% endtab %}
 {% endtabs %}
-
-Полный бэкап (реплей не требуется, менее часа):
 
 {% tabs %}
 {% tab title="Германия 1" %}
 ```
 wget -P ~/home/blockchain --user=u237308-sub1 --password=3oOk8579Ff8ceKdy https://u237308-sub1.your-storagebox.de/block_log.index https://u237308-sub1.your-storagebox.de/block_log https://u237308-sub1.your-storagebox.de/shared_memory.bin
-
 ```
 {% endtab %}
 
 {% tab title="Финляндия 1" %}
 ```
 wget -P ~/home/blockchain --user=u245960-sub1 --password=7USy9jS9GS2Yka3c https://u245960-sub1.your-storagebox.de/block_log.index https://u245960-sub1.your-storagebox.de/block_log https://u245960-sub1.your-storagebox.de/shared_memory.bin
-
 ```
 {% endtab %}
 
 {% tab title="Германия 2" %}
 ```
 wget -P ~/home/blockchain --user=u223265-sub1 --password=tXjXAmNBcu8PmmbQ https://u223265-sub1.your-storagebox.de/block_log.index https://u223265-sub1.your-storagebox.de/block_log https://u223265-sub1.your-storagebox.de/shared_memory.bin
-
 ```
 {% endtab %}
 
 {% tab title="Финляндия 2" %}
 ```
 wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https://u233417-sub1.your-storagebox.de/block_log.index https://u233417-sub1.your-storagebox.de/block_log https://u233417-sub1.your-storagebox.de/shared_memory.bin
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -121,7 +111,7 @@ wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https:
 
 ```
 mkdir ~/config && echo 'p2p-endpoint = 0.0.0.0:4243
-webserver-thread-pool-size = 1
+webserver-thread-pool-size = 2
 webserver-http-endpoint = 0.0.0.0:8090
 webserver-ws-endpoint = 0.0.0.0:8091
 read-wait-micro = 500000
@@ -130,15 +120,11 @@ write-wait-micro = 500000
 max-write-wait-retries = 3
 single-write-thread = true
 enable-plugins-on-push-transaction = false
-shared-file-size = 2G
-min-free-shared-file-size = 500M
-inc-shared-file-size = 2G
-block-num-check-free-size = 1000
+block-num-check-free-size = 7200
 plugin = chain p2p json_rpc webserver network_broadcast_api witness database_api witness_api
 clear-votes-before-block = 4294967295
 store-account-metadata = false
 store-memo-in-savings-withdraws = false
-replay-if-corrupted = true
 skip-virtual-ops = true
 enable-stale-production = false
 required-participation = 33
@@ -287,45 +273,39 @@ sudo docker restart golosd
 [Подробнее](https://wiki.golos.id/witnesses/median-props) о значении медианных параметров. Изменить параметры можно и через [cli\_wallet](guide.md#rabota-s-cli-wallet) ноды, заменив логин и выполнив команду:
 
 {% tabs %}
-{% tab title="Базовые" %}
+{% tab title="16ХФ" %}
 ```
 update_chain_properties ЛОГИН {"account_creation_fee":"1.000 GOLOS", "maximum_block_size":65536, "sbd_interest_rate":0, "create_account_min_golos_fee":"0.100 GOLOS", "create_account_min_delegation":"1.000 GOLOS", "create_account_delegation_time":2592000, "min_delegation":"1.000 GOLOS"} true
-
 ```
 {% endtab %}
 
-{% tab title="19 ХФ" %}
+{% tab title="19ХФ" %}
 ```
 update_chain_properties ЛОГИН {"max_referral_interest_rate":1000, "max_referral_term_sec":15552000, "min_referral_break_fee":"1.000 GOLOS", "max_referral_break_fee":"100.000 GOLOS", "posts_window":3, "posts_per_window":1, "comments_window":200, "comments_per_window":10, "votes_window":15, "votes_per_window":5, "auction_window_size":0, "max_delegated_vesting_interest_rate":8000, "custom_ops_bandwidth_multiplier":10, "min_curation_percent":7500, "max_curation_percent":7500, "curation_reward_curve":"square_root", "allow_distribute_auction_reward":true, "allow_return_auction_reward_to_fund":true} true
-
 ```
 {% endtab %}
 
-{% tab title="22 ХФ" %}
+{% tab title="22ХФ" %}
 ```
 update_chain_properties ЛОГИН {"worker_request_creation_fee":"100.000 GBG", "worker_request_approve_min_percent":1500, "sbd_debt_convert_rate":100, "vote_regeneration_per_day":10, "witness_skipping_reset_time":21600, "witness_idleness_time":7776000, "account_idleness_time":15552000} true
-
 ```
 {% endtab %}
 
-{% tab title="23 ХФ" %}
+{% tab title="23ХФ" %}
 ```
 update_chain_properties ЛОГИН {"claim_idleness_time":86400, "min_invite_balance":"10.000 GOLOS"} true
-
 ```
 {% endtab %}
 
-{% tab title="24 ХФ" %}
+{% tab title="24ХФ" %}
 ```
 update_chain_properties ЛОГИН {"asset_creation_fee":"2000.000 GBG", "invite_transfer_interval_sec":60} true
-
 ```
 {% endtab %}
 
-{% tab title="26 ХФ" %}
+{% tab title="26ХФ" %}
 ```
 update_chain_properties ЛОГИН {"worker_emission_percent":100, "vesting_of_remain_percent":8000, "convert_fee_percent":500, "min_golos_power_to_curate":"1000.000 GOLOS", "negrep_posting_window":1440, "negrep_posting_per_window":3} true
-
 ```
 {% endtab %}
 {% endtabs %}

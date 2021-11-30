@@ -1,6 +1,6 @@
 # Настройка для API-ноды
 
-Публичные API-ноды важная составляющая для блокчейна, особенно когда есть заинтересованность в развитии приложений (клиентов, ботов, скриптов, игр и пр.), которые часто повышают ценность всего проекта.
+Публичные API-ноды важная составляющая для блокчейна, особенно когда есть заинтересованность в развитии приложений (сервисов, игр, ботов и пр.), которые часто повышают ценность всего проекта.
 
 Ниже описан вариант установки API-ноды (с хранением истории операций за неделю). Для такой, оптимальный вариант - сервер с 16 Гб оперативной памяти и 80 Гб SSD накопителя.
 
@@ -14,28 +14,24 @@
 {% tab title="Германия 1" %}
 ```
 wget -P ~/home/blockchain --user=u237308-sub1 --password=3oOk8579Ff8ceKdy https://u237308-sub1.your-storagebox.de/block_log.index https://u237308-sub1.your-storagebox.de/block_log
-
 ```
 {% endtab %}
 
 {% tab title="Финляндия 1" %}
 ```
 wget -P ~/home/blockchain --user=u245960-sub1 --password=7USy9jS9GS2Yka3c https://u245960-sub1.your-storagebox.de/block_log.index https://u245960-sub1.your-storagebox.de/block_log
-
 ```
 {% endtab %}
 
 {% tab title="Германия 2" %}
 ```
 wget -P ~/home/blockchain --user=u223265-sub1 --password=tXjXAmNBcu8PmmbQ https://u223265-sub1.your-storagebox.de/block_log.index https://u223265-sub1.your-storagebox.de/block_log
-
 ```
 {% endtab %}
 
 {% tab title="Финляндия 2" %}
 ```
 wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https://u233417-sub1.your-storagebox.de/block_log.index https://u233417-sub1.your-storagebox.de/block_log
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -43,7 +39,7 @@ wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https:
 Добавляем конфиг ноды (указанные в нём `202800` блоков = неделя). Какие плагины нужны для ваших целей, можно уточнить в чате делегатов [https://t.me/golos\_witnesses](https://t.me/golos\_witnesses)
 
 ```
-mkdir ~/config && echo 'webserver-thread-pool-size = 2
+mkdir ~/config && echo 'webserver-thread-pool-size = 4
 webserver-http-endpoint = 0.0.0.0:8090
 webserver-ws-endpoint = 0.0.0.0:8091
 read-wait-micro = 500000
@@ -52,20 +48,21 @@ write-wait-micro = 500000
 max-write-wait-retries = 3
 single-write-thread = true
 enable-plugins-on-push-transaction = false
-shared-file-size = 2G
-min-free-shared-file-size = 500M
-inc-shared-file-size = 2G
-block-num-check-free-size = 1000
+block-num-check-free-size = 1200
 plugin = chain p2p json_rpc webserver network_broadcast_api witness database_api witness_api
 plugin = social_network follow tags operation_history account_history market_history
 plugin = account_by_key worker_api private_message account_notes
 clear-votes-before-block = 4294967295
 history-start-block = 38000000
 history-blocks = 202800
+# history-blacklist-ops = producer_reward
+# history-blacklist-ops = pow2
+store-evaluator-events = true
+event-blocks = 202800
+follow-max-feed-size = 100
 comment-title-depth = 202800
 comment-body-depth = 202800
 comment-json-metadata-depth = 202800
-replay-if-corrupted = true
 skip-virtual-ops = false
 enable-stale-production = false
 mining-threads = 0
@@ -122,33 +119,12 @@ server {
 listen 80;
 server_name test.lexai.host;
 location / {
-if ($request_method = 'OPTIONS') {
 add_header 'Access-Control-Allow-Origin' '*';
 add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-add_header 'Access-Control-Allow-Headers' 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range';
-add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range';
-add_header 'Access-Control-Max-Age' 1728000;
-add_header 'Content-Type' 'text/plain; charset=utf-8';
-add_header 'Content-Length' 0;
-return 204;
-}
-if ($request_method = 'POST') {
-add_header 'Access-Control-Allow-Origin' '*';
-add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-add_header 'Access-Control-Allow-Headers' 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range';
-add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range';
-}
-if ($request_method = 'GET') {
-add_header 'Access-Control-Allow-Origin' '*';
-add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-add_header 'Access-Control-Allow-Headers' 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range';
-add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range';
-}
-proxy_http_version 1.1;
+add_header 'Access-Control-Allow-Headers' 'DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range';
 proxy_set_header Host $host;
 proxy_set_header X-Real-IP $remote_addr;
 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-proxy_set_header X-Forwarded-Proto $scheme;
 proxy_pass http://127.0.0.1:8090;
 }
 location /ws {
@@ -158,7 +134,6 @@ proxy_set_header Connection "upgrade";
 proxy_set_header Host $host;
 proxy_set_header X-Real-IP $remote_addr;
 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-proxy_set_header X-Forwarded-Proto $scheme;
 proxy_pass http://127.0.0.1:8091;
 proxy_read_timeout 3600;
 }
