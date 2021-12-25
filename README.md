@@ -2,12 +2,12 @@
 
 [![](https://raw.githubusercontent.com/golos-blockchain/wiki/master/golos\_logo.png)](https://golos.id)
 
-Эта база знаний (wiki) - точка сбора знаний по **блокчейну Голос.**\
+Данная Wiki точка сбора знаний по **блокчейну Голос** и его сервисам**.**\
 \
-Основные веб-клиенты Golos Блоги - [golos.id](https://golos.id) и [golos.in](https://golos.in). Доступен и [golos.today](https://golos.today), который выполняет роль тестового клиента (обновляется в первую очередь, но его работа возможна с ошибками). Из альтернативных [expertgroup.org](https://expertgroup.org) и [4-20.io](https://4-20.io), в сети TOR [goloszrorrdctlwf.onion](http://goloszrorrdctlwf.onion).\
+Основные веб-клиенты - [golos.id](https://golos.id) и [golos.in](https://golos.in). Доступен и [golos.today](https://golos.today), который выполняет роль тестового клиента (обновляется в первую очередь, но его работа возможна с ошибками). Из альтернативных [4-20.io](https://4-20.io) и [expertgroup.org](https://expertgroup.org), в сети TOR [goloszrorrdctlwf.onion](http://goloszrorrdctlwf.onion).\
 \
-[Сервисы, игры, боты](https://golos.id/services) собраны в данном разделе. Веб-клиент в формате форума, напр. [golostalk.com](https://golostalk.com).
+Также может оказаться полезным раздел [сервисы, игры, боты](https://golos.id/services), формат форумов (напр. [golostalk.com](https://golostalk.com)) или веб-клиент биржи (напр. [golosdex.com](https://golosdex.com)).
 
-Начните изучение возможностей с стартового раздела для [Пользователей](users/welcome/).
+Начните изучение возможностей с раздела для [Пользователей](users/welcome/).
 
-Если вас интересует разработка программного обеспечения для Голоса и на Голосе, много полезной информации вы найдёте в разделе для [Разработчиков](developers/basics/).
+Если вас интересуют вопросы разработки для Голоса и на Голосе, полезную информацию вы найдёте в разделе для [Разработчиков](developers/basics/).
