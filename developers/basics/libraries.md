@@ -16,13 +16,16 @@
 * Упрощенный конструктор транзакций для операций;
 * Функции обратного вызова для запросов;
 
-[Документация](https://github.com/golos-blockchain/libs/tree/master/golos-lib-js/docs) golos-lib-js доступна на GitHub. Примеры для часто используемых операций смотрите в [разделе Примеры кода](code-examples.md).
+[Документация](https://github.com/golos-blockchain/libs/tree/master/golos-lib-js/docs) golos-lib-js доступна на GitHub. Также примеры для часто используемых операций смотрите в [разделе Примеры кода](code-examples.md).
 
 ## Python
 
-[Библиотека golos-python](https://github.com/Privex/golos-python) от [@someguy](https://golos.id/@someguy123)/[@ksantoprotein](https://golos.id/@ksantoprotein) поддерживает как API запросы, так и формирование транзакций. [Документация](https://golos-python.readthedocs.io/en/latest/index.html) к ней на английском языке.
+Библиотека [https://github.com/golos-blockchain/lib-python](https://github.com/golos-blockchain/lib-python), наиболее **актуальная** **на текущий момент** и поддерживает последние изменения в блокчейне (26 ХФ).\
+[https://pypi.org/project/golos-lib-python/](https://pypi.org/project/golos-lib-python/)\
+\
+За её основу была взята[ golos-python](https://github.com/bitfag/golos-python) от[ @vvk](https://golos.id/@vvk) (актуальна до 23 ХФ).
 
-[Библиотека golos-python](https://github.com/bitfag/golos-python) от [@vvk](https://golos.id/@vvk) также поддерживает большинство необходимого.
+[Библиотека golos-python](https://github.com/Privex/golos-python) от [@someguy](https://golos.id/@someguy123)/[@ksantoprotein](https://golos.id/@ksantoprotein) поддерживает как API запросы, так и формирование транзакций. [Документация](https://golos-python.readthedocs.io/en/latest/index.html) к ней на английском языке.
 
 ## PHP
 
