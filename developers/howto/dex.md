@@ -4,8 +4,8 @@
 
 На внутренней бирже GolosDEX можно покупать и продавать средства в GOLOS, GBG и токенах UIA. Чтобы продать или купить средства, нужно создать ордер.
 
-**JavaScript**
-
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 golos.config.set('websocket', 'wss://api.golos.today/ws')
 
@@ -25,9 +25,9 @@ try {
     console.error('cannot create order', err)
 }
 ```
+{% endtab %}
 
-**Python**
-
+{% tab title="Python" %}
 ```python
 #!/usr/bin/env python3
 from datetime import datetime, timedelta
@@ -65,6 +65,8 @@ except Exception as err:
     print('order not created')
     logging.error(err, exc_info=True)
 ```
+{% endtab %}
+{% endtabs %}
 
 **В этом примере:**
 
@@ -77,8 +79,8 @@ except Exception as err:
 
 Аккаунт может отменить созданный им ордер, если по нему еще не прошли сделки.
 
-**JavaScript**
-
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 const orderid = 13548 // а так неправильно: orderid = '13548'
 
@@ -87,11 +89,11 @@ try {
     console.log('order canceled')
 } catch (err) {
     console.error('cannot cancel order', err)
-}
+}jaja
 ```
+{% endtab %}
 
-**Python**
-
+{% tab title="Python" %}
 ```python
 orderid = 13548 # а так неправильно: orderid = '13548'
 
@@ -107,11 +109,13 @@ except Exception as err:
     print('order not canceled')
     logging.error(err, exc_info=True)
 ```
+{% endtab %}
+{% endtabs %}
 
 ## Балансы пользователя
 
-**JavaScript**
-
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 const res = await golos.api.getAccounts(['snake'])
 if (!data[0]) {
@@ -133,9 +137,9 @@ if (dogecoin) {
     console.log('no DOGECOIN balance')
 }
 ```
+{% endtab %}
 
-**Python**
-
+{% tab title="Python" %}
 ```python
 data = steem.get_accounts(['snake'])
 if not len(data):
@@ -157,8 +161,10 @@ if not data == None:
     print(data['tip_balance'])
     print(data['market_balance'])
 ```
+{% endtab %}
+{% endtabs %}
 
-## Создание бота\скрипта
+## Разработка на JavaScript
 
 В этом случае требуется Node.js, и его версия должна быть не ниже **11**, а рекомендуется - **16**.
 
@@ -244,7 +250,7 @@ const golos = require('golos-lib-js')
 node index.mjs
 ```
 
-## Создание бота\скрипта
+## Разработка на Python
 
 Необходим Python версии не ниже 3.6.1, но не 4.0.0 и выше.
 
