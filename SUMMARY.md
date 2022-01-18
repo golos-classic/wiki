@@ -44,6 +44,7 @@
   * [HF26: Новые возможности](developers/hardforks/hf26\_release.md)
 * [Руководства (HowTo)](developers/howto/README.md)
   * [Скрипт регистрации аккаунтов](developers/howto/registration-service.md)
+  * [Операции на бирже](developers/howto/dex.md)
   * [Как использовать мультиподписи](developers/howto/multisig.md)
   * [Как объединять операции в одну транзакцию](developers/howto/ops-merging.md)
   * [Пример запуска тестнета](developers/howto/testnet.md)
