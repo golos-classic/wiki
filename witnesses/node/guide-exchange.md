@@ -5,7 +5,7 @@
 Скачиваем cli\_wallet и устанавливаем права на файл:
 
 ```
-wget https://files.golos.id/cli_wallet && chmod +x cli_wallet
+wget --user=u229208-sub2 --password=8X7cTMWf0qrpiKC3 https://u229208-sub2.your-storagebox.de/cli_wallet && chmod +x cli_wallet
 ```
 
 Запускаем cli\_wallet (список альтернативных публичных [API-нод](https://golos.id/nodes)):

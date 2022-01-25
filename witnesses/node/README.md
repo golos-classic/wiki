@@ -7,9 +7,8 @@
 {% hint style="info" %}
 Обновляемый делегатами [список ](https://golos.id/nodes)API и SEED нод.
 
-Скомпилированные бинарники актуальной версии БЧ:
+Скомпилированные актуальные бинарники ноды и кошелька:
 
-* golosd: [https://files.golos.id/golosd](https://files.golos.id/golosd)
-* cli\_wallet: [https://files.golos.id/cli\_wallet](https://files.golos.id/cli_wallet)
+* `wget --user=u229208-sub2 --password=8X7cTMWf0qrpiKC3 https://u229208-sub2.your-storagebox.de/golosd`
+* `wget --user=u229208-sub2 --password=8X7cTMWf0qrpiKC3 https://u229208-sub2.your-storagebox.de/cli_wallet`
 {% endhint %}
-
