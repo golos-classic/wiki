@@ -1,5 +1,5 @@
 ---
-description: Установка ноды на сервере с ОС Ubuntu 16.04
+description: Установка ноды на сервере с ОС Ubuntu 18.04
 ---
 
 # Нода с отладкой GDB
@@ -43,7 +43,7 @@ sudo pip3 install gcovr
 Копируем исходные файлы для сборки ноды из github:
 
 ```
-git clone https://github.com/golos-blockchain/golos.git && cd golos
+git clone https://github.com/golos-blockchain/chain-node.git && cd chain-node
 ```
 
 ```
@@ -75,14 +75,19 @@ make -j $(nproc) && sudo make install
 ## Подготовка файлов
 
 ```
-mkdir -p ~/golos/build/programs/golosd/witness_node_data_dir/blockchain
+mkdir -p ~/chain-node/build/programs/golosd/witness_node_data_dir/blockchain
 ```
 
-Копируем в папку `.../golosd/witness_node_data_dir` свой конфиг для ноды, добавив сид-ноды, напр.\
-\
+```
+sudo cp ~/chain-node/share/golosd/snapshot5392323.json ~/chain-node/build/programs/golosd/ && 
+sudo cp ~/chain-node/share/golosd/seednodes ~/chain-node/build/programs/golosd/witness_node_data_dir/ && 
+sudo cp ~/chain-node/share/golosd/config/config_witness.ini ~/chain-node/build/programs/golosd/witness_node_data_dir/config.ini
+```
+
+Копируем сид-ноды \
 `p2p-seed-node = golos1.lexai.host:4243`\
-`p2p-seed-node = golos2.lexai.host:4243`\
-\
+`p2p-seed-node = golos2.lexai.host:4243` в файл конфиг файл.
+
 Копируем в папку `.../golosd/witness_node_data_dir/blockchain` бэкап файлов блоклогс и шаред-мемори, чтобы не терять время на синхронизацию сети (копии возможно скачать [здесь](https://wiki.golos.id/witnesses/node/guide#ustanavlivaem-nodu)).
 
 ## Запуск GDB
@@ -90,13 +95,13 @@ mkdir -p ~/golos/build/programs/golosd/witness_node_data_dir/blockchain
 Устанавливаем отладчик gdb
 
 ```
-sudo apt-get install gdb
+sudo apt-get install gdb -y
 ```
 
 Переходим в папку проекта
 
 ```
-cd ~/golos/build/programs/golosd
+cd ~/chain-node/build/programs/golosd
 ```
 
 Запускаем демон через gdb
@@ -104,6 +109,8 @@ cd ~/golos/build/programs/golosd
 ```
 gdb ./golosd
 ```
+
+На вопрос _Quit this debugging session? (y or n), отменяем вводом **n**_
 
 Включаем сохранение лога (в файл gdb.txt) рядом с файлом запуска
 
