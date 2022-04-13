@@ -8,34 +8,27 @@
 ## Устанавливаем Docker
 
 ```
-sudo apt-get update
-```
-
-```
+sudo apt-get update && 
 sudo apt-get install -y \
-    apt-transport-https \
     ca-certificates \
     curl \
-    software-properties-common
+    gnupg \
+    lsb-release
 ```
 
 ```
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
 
 ```
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
 ```
-sudo apt-get update
-```
-
-```
-sudo apt-get install docker-ce -y
+sudo apt-get update && 
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 ```
 
 ## Устанавливаем ноду
@@ -69,6 +62,8 @@ wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https:
 ```
 {% endtab %}
 {% endtabs %}
+
+Полный бэкап (реплей не требуется, менее часа):
 
 {% tabs %}
 {% tab title="Германия 1" %}
