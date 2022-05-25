@@ -81,6 +81,8 @@ sudo service elasticsearch restart
 elastic-search-uri = http://172.17.0.1:9200
 elastic-search-login = elastic
 elastic-search-password = 123456
+elastic-search-versions-depth = 10
+elastic-search-skip-comments-before = 2019-01-01T00:00:00
 ```
 
 где `elastic-search-uri` прописан с учётом того что нода будет запускаться через Docker, а пароль к пользователю elastic заданный на [этом шаге](elasticsearch.md#ustanavlivaem-paroli-na-dostupy).
