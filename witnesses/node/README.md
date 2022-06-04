@@ -9,6 +9,6 @@
 
 Скомпилированные актуальные бинарники ноды и кошелька:
 
-* `wget --user=u229208-sub2 --password=8X7cTMWf0qrpiKC3 https://u229208-sub2.your-storagebox.de/golosd`
-* `wget --user=u229208-sub2 --password=8X7cTMWf0qrpiKC3 https://u229208-sub2.your-storagebox.de/cli_wallet`
+* `wget`[`https://files.golos.app/golosd`](https://files.golos.app/golosd)
+* `wget`[`https://files.golos.app/cli_wallet`](https://files.golos.app/cli\_wallet)``
 {% endhint %}

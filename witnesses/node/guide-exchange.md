@@ -5,7 +5,7 @@
 Скачиваем cli\_wallet и устанавливаем права на файл:
 
 ```
-wget --user=u229208-sub2 --password=8X7cTMWf0qrpiKC3 https://u229208-sub2.your-storagebox.de/cli_wallet && chmod +x cli_wallet
+wget https://files.golos.app/cli_wallet && chmod +x cli_wallet
 ```
 
 Запускаем cli\_wallet (список альтернативных публичных [API-нод](https://golos.id/nodes)):
@@ -65,28 +65,24 @@ import_key 5JX..........
 {% tab title="Германия 1" %}
 ```
 wget -P ~/blockchain --user=u237308-sub1 --password=3oOk8579Ff8ceKdy https://u237308-sub1.your-storagebox.de/block_log.index https://u237308-sub1.your-storagebox.de/block_log
-
 ```
 {% endtab %}
 
 {% tab title="Финляндия 1" %}
 ```
 wget -P ~/blockchain --user=u245960-sub1 --password=7USy9jS9GS2Yka3c https://u245960-sub1.your-storagebox.de/block_log.index https://u245960-sub1.your-storagebox.de/block_log
-
 ```
 {% endtab %}
 
 {% tab title="Германия 2" %}
 ```
 wget -P ~/blockchain --user=u223265-sub1 --password=tXjXAmNBcu8PmmbQ https://u223265-sub1.your-storagebox.de/block_log.index https://u223265-sub1.your-storagebox.de/block_log
-
 ```
 {% endtab %}
 
 {% tab title="Финляндия 2" %}
 ```
 wget -P ~/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https://u233417-sub1.your-storagebox.de/block_log.index https://u233417-sub1.your-storagebox.de/block_log
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -104,8 +100,6 @@ max-write-wait-retries = 3
 single-write-thread = true
 enable-plugins-on-push-transaction = false
 shared-file-size = 2G
-min-free-shared-file-size = 500M
-inc-shared-file-size = 2G
 block-num-check-free-size = 1000
 plugin = chain p2p json_rpc webserver network_broadcast_api database_api operation_history account_history account_by_key
 history-start-block = 42000000
@@ -113,6 +107,7 @@ history-blocks = 864000
 track-account = rudex
 clear-votes-before-block = 4294967295
 store-account-metadata = false
+store-comment-extras = false
 replay-if-corrupted = true
 skip-virtual-ops = true
 enable-stale-production = false
@@ -214,4 +209,4 @@ curl --data '{"jsonrpc": "2.0", "method": "get_block", "params": ["30000000"], "
 curl --data '{"jsonrpc": "2.0", "method": "get_ops_in_block", "params": ["30000000","false"], "id": 1}' http://127.0.0.1:8094
 ```
 
-Описание команд к cli\_wallet также есть [здесь](../../developers/api/cli-wallet.md) или можно сформировать формат пользуясь сервисом [https://gapi.golos.today/steemjs/api/](https://gapi.golos.today/steemjs/api/)
+Описание команд к cli\_wallet также есть [здесь](../../developers/api/cli-wallet.md) или можно сформировать формат пользуясь сервисом [gapi.golos.today](https://gapi.golos.today/api/)

@@ -1,13 +1,8 @@
 # Тестнет (ноды для тестов)
 
-Для экспериментов до использования вашего кода в основной цепи блокчейна рекомендуются проверять в тестнете:
+Для экспериментов до использования вашего кода в основной цепи блокчейна рекомендуются проверять запуская ноду тестнета.
 
-https://testnet.golos.today\
-wss/testnet.golos.today/ws
-
-`5JVFFWRLwz6JoP9kguuRFfytToGU6cLgBVTL9t6NB3D3BQLbUBS`
-
-Кроме того, может пригодиться обкатка на так называемой "лайвтест-цепи", с снепшотом данных пользователей.
+Или может пригодиться обкатка на так называемой "лайвтест-цепи", с снапшотом данных пользователей.
 
 https://apibeta.golos.today\
 wss/apibeta.golos.today/ws
@@ -18,10 +13,12 @@ Active: `5K67PNheLkmxkgJ5UjvR8Nyt3GVPoLEN1dMZjFuNETzrNyMecPG` \
 Owner: `5KD45zFh5WNFaW8mZTSx4eicy8FzwEmm5psNKH7GLg5bVQwUw6s` \
 Memo: `5Kek6zP5vQmDRXXNBtZkxUtoMT3iW1xEYXcifkA2UHb2VT5UD7P`\
 \
-Её используют и дев-приложения:
+Её используют и dev-приложения:
 
 * Authorization [dev.golos.app](https://dev.golos.app) (на [github](https://github.com/golos-blockchain/ui-auth/tree/dev))
 * Notify [devnotify.golos.app](https://devnotify.golos.app) (на [github](https://github.com/golos-blockchain/notify/tree/dev))
 * ImageProxy [devimages.golos.today](https://devimages.golos.today/) (на [github](https://github.com/golos-blockchain/imageproxy/tree/dev))
-* Forum [dev.golostalk.com](https://dev.golostalk.com) (на [github](https://github.com/golos-blockchain/ui-forums/tree/dev))
 * Blogs (**main client**) [beta.golos.today](https://beta.golos.today) (на [github](https://github.com/golos-blockchain/ui-blogs/tree/beta))
+* Forum [dev.golostalk.com](https://dev.golostalk.com) (на [github](https://github.com/golos-blockchain/ui-forums/tree/dev))
+* Messenger [devchat.golos.app](https://devchat.golos.app/) (на [github](https://github.com/golos-blockchain/ui-messenger/tree/dev))
+* Exchange [devdex.golos.app](https://devdex.golos.app/) (на [github](https://github.com/golos-blockchain/ui-dex/tree/develop))

@@ -6,6 +6,22 @@ description: >-
 
 # Обновления на Голосе
 
+## Май 2022
+
+### Мессенджер на Android и Desktop
+
+Обмен приватными сообщениями на устройствах с Android, добавлены уведомления, настройки включая выбор нод. В перспективе добавить на Google Play. Также, мессенджер включен в состав клиента Golos Desktop. [Подробнее >](https://golos.id/ru--golos/@lex/messendzher-na-android-a-takzhe-v-golos-desktop-versii-kontenta-posty-dlya-podpischikov)
+
+### Внутренний обмен токенов
+
+Функционал быстрого обмена токенов (GOLOS, GBG, UIA альтернативных шлюзов с LTC, DASH, HIVE, STEEM, USDT и другими). В обменнике, можно получить представление о сумме/курсе по сделке, ценности токенов в рублях (информация с CoinMarketCap). [Подробнее >](https://golos.id/ru--golos/@lex/bystryi-obmen-tokenov-ceny-s-coinmarketcap-pravki-desktop-klienta-vstraivanie-telegram-ssylok)
+
+## Март 2022
+
+### Golos Desktop - альтернативный клиент
+
+Дополнительный способ обмена информацией аккаунтов и взаимодействия с кошельком. Минимизирует риски при блокировке публичных сайтов, так как работает напрямую с нодами блокчейна (плюсом полная прозрачность без фильтров, просмотр всего контента). [Подробнее >](https://golos.id/ru--golos/@lex/alternativnyi-klient-blogov-golos-desktop-izmeneniya-v-tredakh-kommentariev)
+
 ## Январь 2022
 
 ### Новый веб-клиент биржи DEX
@@ -80,7 +96,7 @@ description: >-
 
 25 хардфорк (обновление протокола блокчейна)
 
-### Добавление GOLOS в сервисе [C**oins.Black**](https://coins.black)
+### Добавление GOLOS в сервисе [C**oins.Black**](https://coins.black/)
 
 Сервис обмена криптовалют, позволяющий купить токены, используя сотню вариантов оплаты при минимальной комиссии и отсутствии верификации личности. [Подробнее >](https://golos.id/ru--golos/@on0tole/pryamaya-pokupka-tokenov-golos-za-rubli-i-ne-tolko)
 
@@ -102,7 +118,7 @@ description: >-
 
 **Основные причины**: невозможность около года вывести токены с биржи, блокировка пользователей с Украины и Белоруссии, отрицательные результаты переговоров на протяжении многих месяцев по вопросу включения кошелька, аудита и сжигания, листинга и пр.
 
-### Обновление базы знаний [wiki.golos.id](https://wiki.golos.id)
+### Обновление базы знаний [wiki.golos.id](https://wiki.golos.id/)
 
 Актуализация информации во всех разделах базы знаний о блокчейне Голос для пользователей, разработчиков, делегатов.
 
@@ -144,13 +160,13 @@ description: >-
 
 ### Добавление Голос в рейтинги
 
-Актуализирована информация о блокчейне Голос на [CoinMarketCap](https://coinmarketcap.com/currencies/golos-blockchain/), [СoinGecko](https://www.coingecko.com/en/coins/golos-blockchain), [СryptoCompare](https://www.cryptocompare.com/coins/gls/overview) и в популярном приложении [Blockfolio](https://blockfolio.com).
+Актуализирована информация о блокчейне Голос на [CoinMarketCap](https://coinmarketcap.com/currencies/golos-blockchain/), [СoinGecko](https://www.coingecko.com/en/coins/golos-blockchain), [СryptoCompare](https://www.cryptocompare.com/coins/gls/overview) и в популярном приложении [Blockfolio](https://blockfolio.com/).
 
 ### Запуск альтернативных веб-клиентов
 
 Был запущен дополнительный веб-клиент Golos Блоги [golos.in](https://golos.in), который расположен на других серверах и использует другие ноды. Кроме того, отдельно был выделен клиент [golos.today](https://golos.today) (для тестирования обновлений).
 
-В сети TOR начал работать [goloszrorrdctlwf.onion](http://goloszrorrdctlwf.onion). Также при использовании децентрализованных DNS от [OpenNIC](https://www.opennic.org) доступен [gol.oss](http://gol.oss).
+В сети TOR начал работать [goloszrorrdctlwf.onion](http://goloszrorrdctlwf.onion). Также при использовании децентрализованных DNS от [OpenNIC](https://www.opennic.org/) доступен [gol.oss](http://gol.oss).
 
 ## Декабрь 2019
 

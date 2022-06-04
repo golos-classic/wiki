@@ -2,7 +2,7 @@
 
 Публичные API-ноды важная составляющая для блокчейна, особенно когда есть заинтересованность в развитии приложений (сервисов, игр, ботов и пр.), которые часто повышают ценность всего проекта.
 
-Ниже описан вариант установки API-ноды (с хранением истории операций за неделю). Для такой, оптимальный вариант - сервер с 16 Гб оперативной памяти и 80 Гб SSD накопителя, Ubuntu 18.04.
+Ниже описан вариант установки API-ноды (с хранением истории операций за неделю). Для такой, оптимальный вариант - сервер с 16 Гб оперативной памяти и 100 Гб SSD накопителя, Ubuntu 18.04.
 
 ## Устанавливаем ноду
 
@@ -39,7 +39,7 @@ wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https:
 Добавляем конфиг ноды (указанные в нём `202800` блоков = неделя). Какие плагины нужны для ваших целей, можно уточнить в чате делегатов [https://t.me/golos\_witnesses](https://t.me/golos\_witnesses)
 
 ```
-mkdir ~/config && echo 'webserver-thread-pool-size = 4
+mkdir ~/config && echo 'webserver-thread-pool-size = 8
 webserver-http-endpoint = 0.0.0.0:8090
 webserver-ws-endpoint = 0.0.0.0:8091
 read-wait-micro = 500000
@@ -51,18 +51,18 @@ enable-plugins-on-push-transaction = false
 block-num-check-free-size = 1200
 plugin = chain p2p json_rpc webserver network_broadcast_api witness database_api witness_api
 plugin = social_network follow tags operation_history account_history market_history
-plugin = account_by_key worker_api private_message account_notes
+plugin = account_by_key worker_api private_message account_notes event_plugin
 clear-votes-before-block = 4294967295
 history-start-block = 38000000
 history-blocks = 202800
-# history-blacklist-ops = producer_reward
-# history-blacklist-ops = pow2
+history-blacklist-ops = producer_reward
+history-blacklist-ops = pow2
 store-evaluator-events = true
-event-blocks = 202800
-follow-max-feed-size = 100
+event-blocks = 28800
 comment-title-depth = 202800
 comment-body-depth = 202800
 comment-json-metadata-depth = 202800
+follow-max-feed-size = 100
 skip-virtual-ops = false
 enable-stale-production = false
 mining-threads = 0

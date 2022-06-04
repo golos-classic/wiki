@@ -2,14 +2,14 @@
 
 Рекомендованные минимальные системные требования:
 
-* 8 Гб оперативной памяти и 80 Гб SSD накопителя
+* 4-8 Гб оперативной памяти и 80 Гб SSD накопителя
 * Linux-система, напр. Ubuntu 18.04 + стабильный доступ к интернету&#x20;
 
 ## Устанавливаем Docker
 
 ```
 sudo apt-get update && 
-sudo apt-get install -y \
+sudo apt-get install \
     ca-certificates \
     curl \
     gnupg \
@@ -35,7 +35,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
 Скачиваем файл цепочки блоков (без него синхронизация от seed-нод занимает около 2 суток), либо полный бэкап (с ним запуск займёт менее часа).\
 \
-Только цепочка блоков (реплей займёт несколько часов):
+Только цепочка блоков (реплей займёт 4-8 часов):
 
 {% tabs %}
 {% tab title="Германия 1" %}
@@ -93,7 +93,7 @@ wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https:
 
 ### **Генерируем ключи**
 
-Для облегчения получения ключей, вместо запуска ноды без них, использования команды `suggest_brain_key` в cli-wallet для генерирования, правки конфига и перезапуска ноды, можно сразу сгенерировать их [здесь](https://control.viz.world/tools/keys/), либо [здесь](https://cyberway.ropox.app/cyberway/keygen).
+Для облегчения получения ключей, вместо запуска ноды без них, использования команды `suggest_brain_key` в cli-wallet для генерирования, правки конфига и перезапуска ноды, можно сразу сгенерировать их [здесь](https://control.viz.world/tools/keys/), или на [раз](https://cyberway.ropox.app/cyberway/keygen) / [два](https://gapi.golos.today/utils/keys).
 
 ![](https://lh6.googleusercontent.com/CiBEBEORRNyJRZDLDmgrPpqZ8k0yG6NR0doq88h26YaRpH5ioh-eOcFFT-ztCMgVA9u2PAAYnnBBOJ8wkKo10N2NYRPC7e5H3EZrdZiZOIQw\_Az1lmUl6Tlut17nbMc5AroXUR5g)
 
@@ -120,6 +120,7 @@ plugin = chain p2p json_rpc webserver network_broadcast_api witness database_api
 clear-votes-before-block = 4294967295
 store-account-metadata = false
 store-memo-in-savings-withdraws = false
+store-comment-extras = false
 skip-virtual-ops = true
 enable-stale-production = false
 required-participation = 33
@@ -226,7 +227,7 @@ quit
 
 ## **Публикация прайсфидов**
 
-Запускаем в докере ещё один контейнер, подробнее об этом удобном скрипте можно прочитать [здесь](https://wiki.golos.id/witnesses/price-feed).
+Запускаем в докере ещё один контейнер, подробнее об этом скрипте можно прочитать [здесь](https://wiki.golos.id/witnesses/price-feed).
 
 ```
 sudo docker run -it \

@@ -84,11 +84,11 @@ sudo cp ~/chain-node/share/golosd/seednodes ~/chain-node/build/programs/golosd/w
 sudo cp ~/chain-node/share/golosd/config/config_witness.ini ~/chain-node/build/programs/golosd/witness_node_data_dir/config.ini
 ```
 
-Копируем сид-ноды \
+Возможно понадобится прописать сид-ноды в конфиг:\
 `p2p-seed-node = golos1.lexai.host:4243`\
-`p2p-seed-node = golos2.lexai.host:4243` в файл конфиг файл.
+`p2p-seed-node = golos2.lexai.host:4243`
 
-Копируем в папку `.../golosd/witness_node_data_dir/blockchain` бэкап файлов блоклогс и шаред-мемори, чтобы не терять время на синхронизацию сети (копии возможно скачать [здесь](https://wiki.golos.id/witnesses/node/guide#ustanavlivaem-nodu)).
+Копируем в папку `.../golosd/witness_node_data_dir/blockchain` бэкап файлов блоклогс и шаред-мемори, чтобы не терять время на синхронизацию сети (возможно скачать [здесь](https://wiki.golos.id/witnesses/node/guide#ustanavlivaem-nodu)).
 
 ## Запуск GDB
 
