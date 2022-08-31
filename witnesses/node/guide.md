@@ -1,9 +1,9 @@
 # Гайд для witness/seed ноды
 
-Рекомендованные минимальные системные требования:
+Рекомендованные (минимальные) системные требования:
 
-* 4-8 Гб оперативной памяти и 80 Гб SSD накопителя
-* Linux-система, напр. Ubuntu 18.04 + стабильный доступ к интернету&#x20;
+* 4 Гб оперативной памяти и 70 Гб SSD накопителя
+* Linux-система, напр. Ubuntu 18.04/20.04 + стабильный интернет&#x20;
 
 ## Устанавливаем Docker
 
@@ -106,7 +106,7 @@ wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https:
 
 ```
 mkdir ~/config && echo 'p2p-endpoint = 0.0.0.0:4243
-webserver-thread-pool-size = 2
+webserver-thread-pool-size = 4
 webserver-http-endpoint = 0.0.0.0:8090
 webserver-ws-endpoint = 0.0.0.0:8091
 read-wait-micro = 500000

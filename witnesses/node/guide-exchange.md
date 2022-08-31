@@ -90,7 +90,7 @@ wget -P ~/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https://u23
 Добавляем актуальный файл конфигурации ноды (предварительно поменяв аккаунт отслеживания`track-account` и срок хранения истории `history-blocks`, 864000 блоков x 3 секунды = месяц).
 
 ```
-echo 'webserver-thread-pool-size = 2
+echo 'webserver-thread-pool-size = 8
 webserver-http-endpoint = 0.0.0.0:8090
 webserver-ws-endpoint = 0.0.0.0:8091
 read-wait-micro = 500000
@@ -100,7 +100,7 @@ max-write-wait-retries = 3
 single-write-thread = true
 enable-plugins-on-push-transaction = false
 shared-file-size = 2G
-block-num-check-free-size = 1000
+block-num-check-free-size = 1200
 plugin = chain p2p json_rpc webserver network_broadcast_api database_api operation_history account_history account_by_key
 history-start-block = 42000000
 history-blocks = 864000
@@ -108,7 +108,6 @@ track-account = rudex
 clear-votes-before-block = 4294967295
 store-account-metadata = false
 store-comment-extras = false
-replay-if-corrupted = true
 skip-virtual-ops = true
 enable-stale-production = false
 mining-threads = 0

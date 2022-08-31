@@ -2,13 +2,13 @@
 
 Публичные API-ноды важная составляющая для блокчейна, особенно когда есть заинтересованность в развитии приложений (сервисов, игр, ботов и пр.), которые часто повышают ценность всего проекта.
 
-Ниже описан вариант установки API-ноды (с хранением истории операций за неделю). Для такой, оптимальный вариант - сервер с 16 Гб оперативной памяти и 100 Гб SSD накопителя, Ubuntu 18.04.
+Ниже описан вариант установки API-ноды (с хранением истории операций за неделю). Для такой, оптимальный вариант - сервер с 16 Гб оперативной памяти и 100 Гб SSD накопителя, Ubuntu 18.04/20.04.
 
 ## Устанавливаем ноду
 
 Устанавливаем [Docker](https://wiki.golos.id/witnesses/node/guide#ustanavlivaem-docker) (если его ещё нет).
 
-Скачиваем большую часть блоков напрямую с сервера (чтобы не тратить более суток на их получение и лишнюю нагрузку делегатских seed-нод).
+Скачиваем большую часть блоков напрямую с сервера (чтобы не тратить 2 суток на их получение и лишнюю нагрузку делегатских seed-нод).
 
 {% tabs %}
 {% tab title="Германия 1" %}
@@ -51,7 +51,7 @@ enable-plugins-on-push-transaction = false
 block-num-check-free-size = 1200
 plugin = chain p2p json_rpc webserver network_broadcast_api witness database_api witness_api
 plugin = social_network follow tags operation_history account_history market_history
-plugin = account_by_key worker_api private_message account_notes event_plugin
+plugin = account_by_key worker_api private_message account_notes event_plugin account_relations
 clear-votes-before-block = 4294967295
 history-start-block = 38000000
 history-blocks = 202800
