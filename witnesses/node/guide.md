@@ -2,7 +2,7 @@
 
 Рекомендованные (минимальные) системные требования:
 
-* 4 Гб оперативной памяти и 70 Гб SSD накопителя
+* 4 Гб оперативной памяти и 80 Гб SSD накопителя
 * Linux-система, напр. Ubuntu 18.04/20.04 + стабильный интернет&#x20;
 
 ## Устанавливаем Docker
@@ -126,7 +126,6 @@ enable-stale-production = false
 required-participation = 33
 witness = "ЛОГИН-ДЕЛЕГАТА"
 private-key = ПРИВАТНЫЙ-КЛЮЧ-НОДЫ
-mining-threads = 0
 [log.console_appender.stderr]
 stream=std_error
 [log.file_appender.p2p]

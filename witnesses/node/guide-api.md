@@ -65,7 +65,6 @@ comment-json-metadata-depth = 202800
 follow-max-feed-size = 100
 skip-virtual-ops = false
 enable-stale-production = false
-mining-threads = 0
 [log.console_appender.stderr]
 stream=std_error
 [log.file_appender.p2p]

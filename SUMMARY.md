@@ -43,6 +43,7 @@
   * [HF25: Новые возможности](developers/hardforks/hf25\_release.md)
   * [HF26: Новые возможности](developers/hardforks/hf26\_release.md)
   * [HF27: Новые возможности](developers/hardforks/hf27-novye-vozmozhnosti.md)
+  * [HF28: Новые возможности](developers/hardforks/hf28-novye-vozmozhnosti.md)
 * [Руководства (HowTo)](developers/howto/README.md)
   * [Скрипт регистрации аккаунтов](developers/howto/registration-service.md)
   * [Операции на бирже](developers/howto/dex.md)
