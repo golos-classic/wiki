@@ -59,33 +59,7 @@ import_key 5JX..........
 
 Устанавливаем [Docker](https://wiki.golos.id/witnesses/node/guide#ustanavlivaem-docker) (если его ещё нет).
 
-Скачиваем файл цепочки блоков (без него синхронизация от seed-нод блокчейна занимает более суток).
-
-{% tabs %}
-{% tab title="Германия 1" %}
-```
-wget -P ~/blockchain --user=u237308-sub1 --password=3oOk8579Ff8ceKdy https://u237308-sub1.your-storagebox.de/block_log.index https://u237308-sub1.your-storagebox.de/block_log
-```
-{% endtab %}
-
-{% tab title="Финляндия 1" %}
-```
-wget -P ~/blockchain --user=u245960-sub1 --password=7USy9jS9GS2Yka3c https://u245960-sub1.your-storagebox.de/block_log.index https://u245960-sub1.your-storagebox.de/block_log
-```
-{% endtab %}
-
-{% tab title="Германия 2" %}
-```
-wget -P ~/blockchain --user=u223265-sub1 --password=tXjXAmNBcu8PmmbQ https://u223265-sub1.your-storagebox.de/block_log.index https://u223265-sub1.your-storagebox.de/block_log
-```
-{% endtab %}
-
-{% tab title="Финляндия 2" %}
-```
-wget -P ~/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https://u233417-sub1.your-storagebox.de/block_log.index https://u233417-sub1.your-storagebox.de/block_log
-```
-{% endtab %}
-{% endtabs %}
+[Скачиваем файл](https://wiki.golos.id/witnesses/node/guide#ustanavlivaem-nodu) цепочки блоков (без него синхронизация от seed-нод блокчейна занимает более суток).
 
 Добавляем актуальный файл конфигурации ноды (предварительно поменяв аккаунт отслеживания`track-account` и срок хранения истории `history-blocks`, 864000 блоков x 3 секунды = месяц).
 

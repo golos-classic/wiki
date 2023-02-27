@@ -40,7 +40,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 {% tabs %}
 {% tab title="Германия 1" %}
 ```
-wget -P ~/home/blockchain --user=u237308-sub1 --password=3oOk8579Ff8ceKdy https://u237308-sub1.your-storagebox.de/block_log.index https://u237308-sub1.your-storagebox.de/block_log
+wget -P ~/home/blockchain --user=u340128-sub1 --password=iYtvb1c9oKvnowoS https://u340128-sub1.your-storagebox.de/block_log.index https://u340128-sub1.your-storagebox.de/block_log
 ```
 {% endtab %}
 
@@ -52,7 +52,7 @@ wget -P ~/home/blockchain --user=u245960-sub1 --password=7USy9jS9GS2Yka3c https:
 
 {% tab title="Германия 2" %}
 ```
-wget -P ~/home/blockchain --user=u223265-sub1 --password=tXjXAmNBcu8PmmbQ https://u223265-sub1.your-storagebox.de/block_log.index https://u223265-sub1.your-storagebox.de/block_log
+wget -P ~/home/blockchain --user=u339626-sub1 --password=byQ43CQVLYdHXcTi https://u339626-sub1.your-storagebox.de/block_log.index https://u339626-sub1.your-storagebox.de/block_log
 ```
 {% endtab %}
 
@@ -63,12 +63,12 @@ wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https:
 {% endtab %}
 {% endtabs %}
 
-Полный бэкап (реплей не требуется, менее часа):
+Полный бэкап делегатской ноды (реплей не требуется, менее часа):
 
 {% tabs %}
 {% tab title="Германия 1" %}
 ```
-wget -P ~/home/blockchain --user=u237308-sub1 --password=3oOk8579Ff8ceKdy https://u237308-sub1.your-storagebox.de/block_log.index https://u237308-sub1.your-storagebox.de/block_log https://u237308-sub1.your-storagebox.de/shared_memory.bin
+wget -P ~/home/blockchain --user=u340128-sub1 --password=iYtvb1c9oKvnowoS https://u340128-sub1.your-storagebox.de/block_log.index https://u340128-sub1.your-storagebox.de/block_log https://u340128-sub1.your-storagebox.de/shared_memory.bin
 ```
 {% endtab %}
 
@@ -80,7 +80,7 @@ wget -P ~/home/blockchain --user=u245960-sub1 --password=7USy9jS9GS2Yka3c https:
 
 {% tab title="Германия 2" %}
 ```
-wget -P ~/home/blockchain --user=u223265-sub1 --password=tXjXAmNBcu8PmmbQ https://u223265-sub1.your-storagebox.de/block_log.index https://u223265-sub1.your-storagebox.de/block_log https://u223265-sub1.your-storagebox.de/shared_memory.bin
+wget -P ~/home/blockchain --user=u339626-sub1 --password=byQ43CQVLYdHXcTi https://u339626-sub1.your-storagebox.de/block_log.index https://u339626-sub1.your-storagebox.de/block_log https://u339626-sub1.your-storagebox.de/shared_memory.bin
 ```
 {% endtab %}
 

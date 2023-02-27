@@ -77,7 +77,7 @@
 
 ### Ввод и вывод токенов
 
-Токены Голос (GOLOS) можно купить/продать через биржи указанные на [https://golos.id/exchanges](https://golos.id/exchanges) (пока это RuDEX и GolosDEX, обменники Coins.Black и Steem-Engine), иные формы обмена через внутренний рынок или боты с посредниками.
+Токены GOLOS можно купить/продать через биржи указанные на [wallet.golos.id](https://wallet.golos.id/exchanges) (пока это RuDEX, шлюзы к разным криптовалютам на GolosDEX, Minter, Steem-Engine), иные формы обмена через сервисы или боты.
 
 ## Навигация по сайту
 

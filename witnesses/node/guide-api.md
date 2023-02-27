@@ -8,33 +8,7 @@
 
 Устанавливаем [Docker](https://wiki.golos.id/witnesses/node/guide#ustanavlivaem-docker) (если его ещё нет).
 
-Скачиваем большую часть блоков напрямую с сервера (чтобы не тратить 2 суток на их получение и лишнюю нагрузку делегатских seed-нод).
-
-{% tabs %}
-{% tab title="Германия 1" %}
-```
-wget -P ~/home/blockchain --user=u237308-sub1 --password=3oOk8579Ff8ceKdy https://u237308-sub1.your-storagebox.de/block_log.index https://u237308-sub1.your-storagebox.de/block_log
-```
-{% endtab %}
-
-{% tab title="Финляндия 1" %}
-```
-wget -P ~/home/blockchain --user=u245960-sub1 --password=7USy9jS9GS2Yka3c https://u245960-sub1.your-storagebox.de/block_log.index https://u245960-sub1.your-storagebox.de/block_log
-```
-{% endtab %}
-
-{% tab title="Германия 2" %}
-```
-wget -P ~/home/blockchain --user=u223265-sub1 --password=tXjXAmNBcu8PmmbQ https://u223265-sub1.your-storagebox.de/block_log.index https://u223265-sub1.your-storagebox.de/block_log
-```
-{% endtab %}
-
-{% tab title="Финляндия 2" %}
-```
-wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https://u233417-sub1.your-storagebox.de/block_log.index https://u233417-sub1.your-storagebox.de/block_log
-```
-{% endtab %}
-{% endtabs %}
+Скачиваем большую часть блоков напрямую [с сервера](https://wiki.golos.id/witnesses/node/guide#ustanavlivaem-nodu) (чтобы не тратить 2 суток на их получение и лишнюю нагрузку делегатских seed-нод).
 
 Добавляем конфиг ноды (указанные в нём `202800` блоков = неделя). Какие плагины нужны для ваших целей, можно уточнить в чате делегатов [https://t.me/golos\_witnesses](https://t.me/golos\_witnesses)
 

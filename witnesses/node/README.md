@@ -5,7 +5,7 @@
 * [Настройка](guide-exchange.md) cli\_wallet и ноды для бирж
 
 {% hint style="info" %}
-Обновляемый делегатами [список ](https://golos.id/nodes)API и SEED нод.
+Обновляемый делегатами [список](https://wallet.golos.id/nodes) API и SEED нод.
 
 Скомпилированные актуальные бинарники ноды и кошелька:
 
