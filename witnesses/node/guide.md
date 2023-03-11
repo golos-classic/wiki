@@ -7,6 +7,7 @@
 
 ## Устанавливаем Docker
 
+{% code overflow="wrap" %}
 ```
 sudo apt-get update && 
 sudo apt-get install \
@@ -15,79 +16,150 @@ sudo apt-get install \
     gnupg \
     lsb-release
 ```
+{% endcode %}
 
+{% code overflow="wrap" %}
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
+{% endcode %}
 
+{% code overflow="wrap" %}
 ```
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
+{% endcode %}
 
+{% code overflow="wrap" %}
 ```
 sudo apt-get update && 
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 ```
+{% endcode %}
 
 ## Устанавливаем ноду
 
-Скачиваем файл цепочки блоков (без него синхронизация от seed-нод занимает около 2 суток), либо полный бэкап (с ним запуск займёт менее часа).\
+Скачиваем файл цепочки блоков _block\_log_ (без него синхронизация от seed-нод занимает около 2-3 суток), либо полный бэкап (с ним запуск займёт менее часа).\
 \
-Только цепочка блоков (реплей займёт 4-8 часов):
+Только цепочка блоков ([_реплей займёт 4-8 часов_](#user-content-fn-1)[^1]):
 
 {% tabs %}
 {% tab title="Германия 1" %}
+{% code overflow="wrap" %}
 ```
-wget -P ~/home/blockchain --user=u340128-sub1 --password=iYtvb1c9oKvnowoS https://u340128-sub1.your-storagebox.de/block_log.index https://u340128-sub1.your-storagebox.de/block_log
+rsync --progress -e 'ssh -p23' --recursive u340128-sub1@u340128-sub1.your-storagebox.de:block_log ~/home/blockchain/
 ```
+{% endcode %}
+
+{% code title="password" %}
+```
+iYtvb1c9oKvnowoS
+```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Финляндия 1" %}
+{% code overflow="wrap" %}
 ```
-wget -P ~/home/blockchain --user=u245960-sub1 --password=7USy9jS9GS2Yka3c https://u245960-sub1.your-storagebox.de/block_log.index https://u245960-sub1.your-storagebox.de/block_log
+rsync --progress -e 'ssh -p23' --recursive u245960-sub1@u245960-sub1.your-storagebox.de:block_log ~/home/blockchain/
 ```
+{% endcode %}
+
+{% code title="password" %}
+```
+7USy9jS9GS2Yka3c
+```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Германия 2" %}
+{% code overflow="wrap" %}
 ```
-wget -P ~/home/blockchain --user=u339626-sub1 --password=byQ43CQVLYdHXcTi https://u339626-sub1.your-storagebox.de/block_log.index https://u339626-sub1.your-storagebox.de/block_log
+rsync --progress -e 'ssh -p23' --recursive u339626-sub1@u339626-sub1.your-storagebox.de:block_log ~/home/blockchain/
 ```
+{% endcode %}
+
+{% code title="password" %}
+```
+byQ43CQVLYdHXcTi
+```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Финляндия 2" %}
+{% code overflow="wrap" %}
 ```
-wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https://u233417-sub1.your-storagebox.de/block_log.index https://u233417-sub1.your-storagebox.de/block_log
+rsync --progress -e 'ssh -p23' --recursive u233417-sub1@u233417-sub1.your-storagebox.de:block_log ~/home/blockchain/
 ```
+{% endcode %}
+
+{% code title="password" %}
+```
+xCbthClwoWSVGIt1
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
-Полный бэкап делегатской ноды (реплей не требуется, менее часа):
+Полный бэкап делегатской ноды (_реплей не требуется, менее часа_):
 
 {% tabs %}
 {% tab title="Германия 1" %}
+{% code overflow="wrap" %}
 ```
-wget -P ~/home/blockchain --user=u340128-sub1 --password=iYtvb1c9oKvnowoS https://u340128-sub1.your-storagebox.de/block_log.index https://u340128-sub1.your-storagebox.de/block_log https://u340128-sub1.your-storagebox.de/shared_memory.bin
+rsync --progress -e 'ssh -p23' --recursive u340128-sub1@u340128-sub1.your-storagebox.de: ~/home/blockchain/
 ```
+{% endcode %}
+
+{% code title="password" %}
+```
+iYtvb1c9oKvnowoS
+```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Финляндия 1" %}
+{% code overflow="wrap" %}
 ```
-wget -P ~/home/blockchain --user=u245960-sub1 --password=7USy9jS9GS2Yka3c https://u245960-sub1.your-storagebox.de/block_log.index https://u245960-sub1.your-storagebox.de/block_log https://u245960-sub1.your-storagebox.de/shared_memory.bin
+rsync --progress -e 'ssh -p23' --recursive u245960-sub1@u245960-sub1.your-storagebox.de: ~/home/blockchain/
 ```
+{% endcode %}
+
+{% code title="password" %}
+```
+7USy9jS9GS2Yka3c
+```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Германия 2" %}
+{% code overflow="wrap" %}
 ```
-wget -P ~/home/blockchain --user=u339626-sub1 --password=byQ43CQVLYdHXcTi https://u339626-sub1.your-storagebox.de/block_log.index https://u339626-sub1.your-storagebox.de/block_log https://u339626-sub1.your-storagebox.de/shared_memory.bin
+rsync --progress -e 'ssh -p23' --recursive u339626-sub1@u339626-sub1.your-storagebox.de: ~/home/blockchain/
 ```
+{% endcode %}
+
+{% code title="password" %}
+```
+byQ43CQVLYdHXcTi
+```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Финляндия 2" %}
+{% code overflow="wrap" %}
 ```
-wget -P ~/home/blockchain --user=u233417-sub1 --password=xCbthClwoWSVGIt1 https://u233417-sub1.your-storagebox.de/block_log.index https://u233417-sub1.your-storagebox.de/block_log https://u233417-sub1.your-storagebox.de/shared_memory.bin
+rsync --progress -e 'ssh -p23' --recursive u233417-sub1@u233417-sub1.your-storagebox.de: ~/home/blockchain/
 ```
+{% endcode %}
+
+{% code title="" %}
+```
+xCbthClwoWSVGIt1
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -269,39 +341,51 @@ sudo docker restart golosd
 
 {% tabs %}
 {% tab title="16ХФ" %}
+{% code overflow="wrap" %}
 ```
 update_chain_properties ЛОГИН {"account_creation_fee":"1.000 GOLOS", "maximum_block_size":65536, "sbd_interest_rate":0, "create_account_min_golos_fee":"0.100 GOLOS", "create_account_min_delegation":"1.000 GOLOS", "create_account_delegation_time":2592000, "min_delegation":"1.000 GOLOS"} true
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="19ХФ" %}
+{% code overflow="wrap" %}
 ```
 update_chain_properties ЛОГИН {"max_referral_interest_rate":1000, "max_referral_term_sec":15552000, "min_referral_break_fee":"1.000 GOLOS", "max_referral_break_fee":"100.000 GOLOS", "posts_window":3, "posts_per_window":1, "comments_window":200, "comments_per_window":10, "votes_window":15, "votes_per_window":5, "auction_window_size":0, "max_delegated_vesting_interest_rate":8000, "custom_ops_bandwidth_multiplier":10, "min_curation_percent":7500, "max_curation_percent":7500, "curation_reward_curve":"square_root", "allow_distribute_auction_reward":true, "allow_return_auction_reward_to_fund":true} true
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="22ХФ" %}
+{% code overflow="wrap" %}
 ```
 update_chain_properties ЛОГИН {"worker_request_creation_fee":"100.000 GBG", "worker_request_approve_min_percent":1500, "sbd_debt_convert_rate":100, "vote_regeneration_per_day":10, "witness_skipping_reset_time":21600, "witness_idleness_time":7776000, "account_idleness_time":15552000} true
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="23ХФ" %}
+{% code overflow="wrap" %}
 ```
 update_chain_properties ЛОГИН {"claim_idleness_time":86400, "min_invite_balance":"10.000 GOLOS"} true
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="24ХФ" %}
+{% code overflow="wrap" %}
 ```
 update_chain_properties ЛОГИН {"asset_creation_fee":"2000.000 GBG", "invite_transfer_interval_sec":60} true
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="26ХФ" %}
+{% code overflow="wrap" %}
 ```
 update_chain_properties ЛОГИН {"worker_emission_percent":100, "vesting_of_remain_percent":8000, "convert_fee_percent":500, "min_golos_power_to_curate":"1000.000 GOLOS", "negrep_posting_window":1440, "negrep_posting_per_window":3} true
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -379,3 +463,5 @@ sudo docker run -it \
 ## Есть вопросы?
 
 Можно уточнить в чате делегатов [https://t.me/golos\_witnesses](https://t.me/golos\_witnesses)
+
+[^1]: 
