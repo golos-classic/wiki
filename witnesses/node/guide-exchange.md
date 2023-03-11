@@ -8,7 +8,7 @@
 wget https://files.golos.app/cli_wallet && chmod +x cli_wallet
 ```
 
-Запускаем cli\_wallet (список альтернативных публичных [API-нод](https://golos.id/nodes)):
+Запускаем cli\_wallet (список альтернативных публичных [API-нод](https://wallet.golos.id/nodes)):
 
 ```
 ./cli_wallet -s wss://api.golos.id/ws --rpc-http-endpoint 127.0.0.1:8094 --rpc-http-allowip 127.0.0.1
@@ -45,7 +45,7 @@ import_key 5JX..........
 
 Собрать cli\_wallet можно и с исходного кода за 5 начальных шагов [этой инструкции](../../developers/hardforks/hf18\_instruction.md#razdel\_4-iznachalnaya-ustanovka-blokcheina).
 
-Подключиться к cli\_wallet (список альтернативных публичных [API-нод](https://golos.id/nodes)):
+Подключиться к cli\_wallet (список альтернативных публичных [API-нод](https://wallet.golos.id/nodes)):
 
 ```
 /usr/local/bin/cli_wallet \
