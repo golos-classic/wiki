@@ -10,5 +10,5 @@
 Скомпилированные актуальные бинарники ноды и кошелька:
 
 * `wget`[`https://files.golos.app/golosd`](https://files.golos.app/golosd)
-* `wget`[`https://files.golos.app/cli_wallet`](https://files.golos.app/cli\_wallet)``
+* `wget`[`https://files.golos.app/cli_wallet`](https://files.golos.app/cli\_wallet)
 {% endhint %}

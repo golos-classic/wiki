@@ -43,7 +43,7 @@ sudo service elasticsearch restart
 /usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive
 ```
 
-В конфиг ноды позднее нужно добавить пароль заданный к роли **elastic** (для примера **** 123456). Перезапуск для применения настроек
+В конфиг ноды позднее нужно добавить пароль заданный к роли **elastic** (для примера 123456). Перезапуск для применения настроек
 
 ```
 sudo service elasticsearch restart

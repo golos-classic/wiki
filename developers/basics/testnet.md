@@ -7,7 +7,7 @@
 **https://apibeta.golos.today** или **wss/apibeta.golos.today/ws**
 
 Password (of @lex): `P5Jw6xSsoDhFtrNp1CGAWyzhVez6dFuxCQ9dn4QC7aZZW9R3WmUq`\
-``<mark style="color:green;">`Для всех аккаунтов ключи сброшены на`</mark> <mark style="color:green;"></mark> <mark style="color:green;"></mark><mark style="color:green;"></mark> \
+<mark style="color:green;">`Для всех аккаунтов ключи сброшены на`</mark> <mark style="color:green;"></mark> \
 Posting: `5HwQScueMZdELZpjVBD4gm6xhiKiMqGx18g4WtQ6wVr4nBdSxY5` \
 Active: `5K67PNheLkmxkgJ5UjvR8Nyt3GVPoLEN1dMZjFuNETzrNyMecPG` \
 Owner: `5KD45zFh5WNFaW8mZTSx4eicy8FzwEmm5psNKH7GLg5bVQwUw6s` \

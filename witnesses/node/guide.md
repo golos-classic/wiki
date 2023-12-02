@@ -47,19 +47,19 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 {% tab title="Германия 1" %}
 {% code title="only block_log" overflow="wrap" %}
 ```
-rsync --progress -e 'ssh -p23' --recursive u340128-sub1@u340128-sub1.your-storagebox.de:block_log ~/home/blockchain/
+rsync --progress -e 'ssh -p23' --recursive u379169-sub1@u379169-sub1.your-storagebox.de:block_log ~/home/blockchain/
 ```
 {% endcode %}
 
 {% code title="backup witness node" overflow="wrap" %}
 ```
-rsync --progress -e 'ssh -p23' --recursive u340128-sub1@u340128-sub1.your-storagebox.de: ~/home/blockchain/
+rsync --progress -e 'ssh -p23' --recursive u379169-sub1@u379169-sub1.your-storagebox.de: ~/home/blockchain/
 ```
 {% endcode %}
 
 {% code title="password" %}
 ```
-iYtvb1c9oKvnowoS
+veAujuuVZtivnUj7
 ```
 {% endcode %}
 {% endtab %}
@@ -67,19 +67,19 @@ iYtvb1c9oKvnowoS
 {% tab title="Финляндия 1" %}
 {% code title="only block_log" overflow="wrap" %}
 ```
-rsync --progress -e 'ssh -p23' --recursive u245960-sub1@u245960-sub1.your-storagebox.de:block_log ~/home/blockchain/
+rsync --progress -e 'ssh -p23' --recursive u379085-sub1@u379085-sub1.your-storagebox.de:block_log ~/home/blockchain/
 ```
 {% endcode %}
 
 {% code title="backup witness node" overflow="wrap" %}
 ```
-rsync --progress -e 'ssh -p23' --recursive u245960-sub1@u245960-sub1.your-storagebox.de: ~/home/blockchain/
+rsync --progress -e 'ssh -p23' --recursive u379085-sub1@u379085-sub1.your-storagebox.de: ~/home/blockchain/
 ```
 {% endcode %}
 
 {% code title="password" %}
 ```
-7USy9jS9GS2Yka3c
+dg8NrzpYZ3gMiU7t
 ```
 {% endcode %}
 {% endtab %}
@@ -87,19 +87,19 @@ rsync --progress -e 'ssh -p23' --recursive u245960-sub1@u245960-sub1.your-storag
 {% tab title="Германия 2" %}
 {% code title="only block_log" overflow="wrap" %}
 ```
-rsync --progress -e 'ssh -p23' --recursive u339626-sub1@u339626-sub1.your-storagebox.de:block_log ~/home/blockchain/
+rsync --progress -e 'ssh -p23' --recursive u379178-sub1@u379178-sub1.your-storagebox.de:block_log ~/home/blockchain/
 ```
 {% endcode %}
 
 {% code title="backup witness node" overflow="wrap" %}
 ```
-rsync --progress -e 'ssh -p23' --recursive u339626-sub1@u339626-sub1.your-storagebox.de: ~/home/blockchain/
+rsync --progress -e 'ssh -p23' --recursive u379178-sub1@u379178-sub1.your-storagebox.de: ~/home/blockchain/
 ```
 {% endcode %}
 
 {% code title="password" %}
 ```
-byQ43CQVLYdHXcTi
+Z8iSXLhyXsCBGqeL
 ```
 {% endcode %}
 {% endtab %}
@@ -107,19 +107,19 @@ byQ43CQVLYdHXcTi
 {% tab title="Финляндия 2" %}
 {% code title="only block_log" overflow="wrap" %}
 ```
-rsync --progress -e 'ssh -p23' --recursive u233417-sub1@u233417-sub1.your-storagebox.de:block_log ~/home/blockchain/
+rsync --progress -e 'ssh -p23' --recursive u378847-sub1@u378847-sub1.your-storagebox.de:block_log ~/home/blockchain/
 ```
 {% endcode %}
 
 {% code title="backup witness node" overflow="wrap" %}
 ```
-rsync --progress -e 'ssh -p23' --recursive u233417-sub1@u233417-sub1.your-storagebox.de: ~/home/blockchain/
+rsync --progress -e 'ssh -p23' --recursive u378847-sub1@u378847-sub1.your-storagebox.de: ~/home/blockchain/
 ```
 {% endcode %}
 
 {% code title="password" %}
 ```
-xCbthClwoWSVGIt1
+db3YNrkPtrdyF6id
 ```
 {% endcode %}
 {% endtab %}
@@ -136,7 +136,7 @@ xCbthClwoWSVGIt1
 ### **Загружаем конфиг**
 
 Предварительно заменив значения `witness` и `private-key` на свои. \
-****В качестве `witness` запишем **логин без @** от своего аккаунта на Голосе**,** `private-key` тот что сгенерировали на шаге выше.
+В качестве `witness` запишем **логин без @** от своего аккаунта на Голосе**,** `private-key` тот что сгенерировали на шаге выше.
 
 ```
 mkdir ~/config && echo 'p2p-endpoint = 0.0.0.0:4243
@@ -372,8 +372,8 @@ update_chain_properties ЛОГИН {"min_golos_power_to_emission":"2000.000 GBG"
 ## **Обновление ноды**
 
 Ставим “пустой ключ” для ноды чтобы приостановить подпись блоков через параметры на странице [https://golos.id/@lex/witness](https://golos.id/@lex/witness) (заменив на свой логин).\
-****\
-****Или через [cli\_wallet](guide.md#rabota-s-cli-wallet) ноды командой
+\
+Или через [cli\_wallet](guide.md#rabota-s-cli-wallet) ноды командой
 
 ```
 update_witness "ЛОГИН" "https://golos.id" GLS1111111111111111111111111111111114T1Anm true
